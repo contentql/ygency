@@ -196,6 +196,7 @@ export interface Page {
         | ServiceBannerType
         | ServiceFeaturesType
         | WorkProcessType
+        | BlogType
       )[]
     | null;
   slug?: string | null;
@@ -525,6 +526,16 @@ export interface WorkProcessType {
   id?: string | null;
   blockName?: string | null;
   blockType: 'WorkProcess';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "BlogType".
+ */
+export interface BlogType {
+  title: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Blog';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
