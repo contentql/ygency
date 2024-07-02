@@ -1,5 +1,15 @@
 // This is just to consolidate all the existing blocks and it's respective jsx
 // Always prefer to individually import, the required block or jsx
+import Banner from './About/Banner'
+import { Banner_Block } from './About/Banner/block'
+import OurClients from './About/OurClients'
+import { OurClients_Block } from './About/OurClients/block'
+import Statistics from './About/Statistics'
+import { Statistics_Block } from './About/Statistics/block'
+import TeamInfo from './About/TeamInfo'
+import { TeamInfo_Block } from './About/TeamInfo/block'
+import VideoArea from './About/VideoArea'
+import { VideoArea_Block } from './About/VideoArea/block'
 import About from './Home/About'
 import { About_Block } from './Home/About/block'
 import Advertise from './Home/AdvertiseArea'
@@ -29,6 +39,11 @@ export const blocksJSX = {
   Skills,
   Team,
   Testimonial,
+  Banner,
+  OurClients,
+  Statistics,
+  TeamInfo,
+  VideoArea,
 }
 
 export type SlugType = keyof typeof blocksJSX
@@ -43,4 +58,9 @@ export const blocks = [
   Skills_Block,
   Team_Block,
   Testimonial_Block,
+  Banner_Block,
+  OurClients_Block,
+  Statistics_Block,
+  TeamInfo_Block,
+  VideoArea_Block,
 ]

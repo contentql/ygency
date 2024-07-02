@@ -188,6 +188,11 @@ export interface Page {
         | SkillsType
         | TeamType
         | TestimonialType
+        | BannerType
+        | OurClientsType
+        | StatisticsType
+        | TeamInfoType
+        | VideoAreaType
       )[]
     | null;
   slug?: string | null;
@@ -400,6 +405,80 @@ export interface TestimonialType {
   id?: string | null;
   blockName?: string | null;
   blockType: 'Testimonial';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "BannerType".
+ */
+export interface BannerType {
+  title?: string | null;
+  banner_image1?: string | Media | null;
+  banner_image2?: string | Media | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Banner';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "OurClientsType".
+ */
+export interface OurClientsType {
+  title?: string | null;
+  clients?:
+    | {
+        client_logo?: string | Media | null;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'OurClients';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "StatisticsType".
+ */
+export interface StatisticsType {
+  statistics?:
+    | {
+        number?: number | null;
+        title?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Statistics';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "TeamInfoType".
+ */
+export interface TeamInfoType {
+  caption?: string | null;
+  title?: string | null;
+  features?:
+    | {
+        title?: string | null;
+        description?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'TeamInfo';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "VideoAreaType".
+ */
+export interface VideoAreaType {
+  video_image?: string | Media | null;
+  video_link?: string | null;
+  description?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'VideoArea';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
