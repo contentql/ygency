@@ -193,6 +193,9 @@ export interface Page {
         | StatisticsType
         | TeamInfoType
         | VideoAreaType
+        | ServiceBannerType
+        | ServiceFeaturesType
+        | WorkProcessType
       )[]
     | null;
   slug?: string | null;
@@ -479,6 +482,49 @@ export interface VideoAreaType {
   id?: string | null;
   blockName?: string | null;
   blockType: 'VideoArea';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ServiceBannerType".
+ */
+export interface ServiceBannerType {
+  first_title: string;
+  last_title: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'ServiceBanner';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ServiceFeaturesType".
+ */
+export interface ServiceFeaturesType {
+  features?:
+    | {
+        title?: string | null;
+        description?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'ServiceFeatures';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "WorkProcessType".
+ */
+export interface WorkProcessType {
+  steps?:
+    | {
+        title?: string | null;
+        description?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'WorkProcess';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

@@ -28,6 +28,12 @@ import Team from './Home/Team'
 import { Team_Block } from './Home/Team/block'
 import Testimonial from './Home/Testimonial'
 import { Testimonial_Block } from './Home/Testimonial/block'
+import ServiceBanner from './Services/ServiceBanner'
+import { ServiceBanner_Block } from './Services/ServiceBanner/block'
+import ServiceFeatures from './Services/ServiceFeatures'
+import { ServiceFeatures_Block } from './Services/ServiceFeatures/block'
+import WorkProcess from './Services/WorkProcess'
+import { WorkProcess_Block } from './Services/WorkProcess/block'
 
 export const blocksJSX = {
   Advertise,
@@ -44,6 +50,9 @@ export const blocksJSX = {
   Statistics,
   TeamInfo,
   VideoArea,
+  ServiceBanner,
+  ServiceFeatures,
+  WorkProcess,
 }
 
 export type SlugType = keyof typeof blocksJSX
@@ -63,4 +72,7 @@ export const blocks = [
   Statistics_Block,
   TeamInfo_Block,
   VideoArea_Block,
+  ServiceBanner_Block,
+  ServiceFeatures_Block,
+  WorkProcess_Block,
 ]
