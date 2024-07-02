@@ -38,16 +38,5 @@ export const RecentWork_Block: Block = {
         },
       ],
     },
-    {
-      name: 'client-description',
-      type: 'text',
-      label: 'Client Description',
-    },
-    {
-      name: 'hero_image',
-      type: 'upload',
-      relationTo: 'media',
-      label: 'Hero Image',
-    },
   ],
 }

@@ -16,28 +16,6 @@ const Service = (data: ServiceType) => {
           </div>
         </div>
         <div className='row'>
-          <div className='col-xl-3 col-lg-4 col-sm-6'>
-            <div className='service-four-item wow fadeInUp delay-0-2s'>
-              <div className='content'>
-                <div className='icon-btn'>
-                  <i className='flaticon-development' />
-                  <Link legacyBehavior href='/service-details'>
-                    <a className='more-btn'>
-                      <i className='far fa-arrow-right' />
-                    </a>
-                  </Link>
-                </div>
-                <h5>
-                  <Link legacyBehavior href='/service-details'>
-                    <a>Web Development</a>
-                  </Link>
-                </h5>
-              </div>
-              <div className='image'>
-                <img src='assets/images/services/service1.jpg' alt='Service' />
-              </div>
-            </div>
-          </div>
           {data?.services?.map((service, idx) => (
             <div key={idx} className='col-xl-3 col-lg-4 col-sm-6'>
               <div className='service-four-item wow fadeInDown delay-0-2s'>

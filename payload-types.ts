@@ -304,8 +304,6 @@ export interface RecentWorkType {
         id?: string | null;
       }[]
     | null;
-  'client-description'?: string | null;
-  hero_image?: string | Media | null;
   id?: string | null;
   blockName?: string | null;
   blockType: 'RecentWork';
