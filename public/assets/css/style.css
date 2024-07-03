@@ -6994,7 +6994,9 @@ h6,
   transform: rotate(-45deg);
 }
 .tag-item .image img {
-  width: 100%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
 .tag-item:after,
 .tag-item:before {
@@ -7063,6 +7065,14 @@ h6,
   background-color: var(--ygency-dark-color);
   transform: scale(1.05);
   transition: transform 0.3s;
+  -webkit-box-shadow: 0px 4px 60px rgba(85, 230, 165, 0.2);
+  box-shadow: 0px 4px 60px rgba(85, 230, 165, 0.2);
+}
+
+.tag-image img {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
 }
 /* Service Style Four */
 .service-four-item {
