@@ -31,7 +31,7 @@ const Blogs = ({ blogsData }: { blogsData: Blog[] }) => {
                 <hr />
                 <h4>
                   <Link legacyBehavior href={`blog/${blog?.slug}`}>
-                    <a>{blog?.blog_title}</a>
+                    <a>{blog?.title}</a>
                   </Link>
                 </h4>
                 <Link legacyBehavior href={`blog/${blog?.slug}`}>

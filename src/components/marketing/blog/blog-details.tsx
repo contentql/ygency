@@ -24,7 +24,11 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                 <ul className='blog-meta mb-15 wow fadeInUp delay-0-2s'>
                   <li>
                     <i className='fal fa-user-alt' />
-                    <a href='#'>{(blogData?.author?.value as User)?.name}</a>
+                    {blogData?.author?.slice(0, 3).map((author, index) => (
+                      <a key={index} href='#'>
+                        {(author?.value as User)?.name}
+                      </a>
+                    ))}
                   </li>
                   <li>
                     <i className='far fa-calendar-alt' />
@@ -36,7 +40,7 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                   </li>
                 </ul>
                 <h2 className='page-title wow fadeInUp delay-0-3s'>
-                  {blogData?.blog_title}
+                  {blogData?.title}
                 </h2>
               </div>
             </div>

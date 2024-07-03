@@ -38,6 +38,7 @@ export const Blogs: CollectionConfig = {
       type: 'relationship',
       label: 'Author',
       relationTo: ['users'],
+      hasMany: true,
       // defaultValue: ({ user }: { user: User }) => {
       //   if (!user) return undefined
 
@@ -59,12 +60,36 @@ export const Blogs: CollectionConfig = {
       },
     },
     {
-      name: 'blog_title',
-      label: 'Blog Title',
+      name: 'select_blog_size',
+      type: 'select',
+      admin: {
+        isClearable: true,
+        isSortable: true, // use mouse to drag and drop different values, and sort them according to your choice
+      },
+      defaultValue: '1',
+      options: [
+        {
+          label: 'One',
+          value: '1',
+        },
+        {
+          label: 'Two',
+          value: '2',
+        },
+        // {
+        //   label: 'Three',
+        //   value: '3',
+        // },
+      ],
+    },
+
+    {
+      name: 'title',
+      label: 'Title',
       type: 'text',
       required: true,
     },
-    slugField('blog_title'),
+    slugField(),
     // It will directly use title field to add slug
     // {
     //   name: 'slug',
@@ -89,6 +114,11 @@ export const Blogs: CollectionConfig = {
       type: 'relationship',
       relationTo: ['tags'],
       hasMany: true,
+    },
+    {
+      name: 'sub_title',
+      label: 'Sub Title',
+      type: 'text',
     },
     {
       name: 'blog_image',
