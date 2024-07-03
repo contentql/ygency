@@ -1,7 +1,6 @@
-import { Blog } from '@payload-types'
+import { Blog, Media } from '@payload-types'
 
-import { BentoGridDemo } from '@/components/marketing/blog/BentoGridDemo'
-import TagDetails from '@/components/marketing/tag/TagDetails'
+import Blogs from '@/components/marketing/blog/Blogs'
 import { serverClient } from '@/trpc/serverClient'
 
 interface PageProps {
@@ -16,10 +15,37 @@ const page = async ({ params }: PageProps) => {
 
     return (
       <div>
-        <TagDetails data={blogs?.tagData.at(0) as any} />
+        {/* <TagDetails data={blogs?.tagData.at(0) as any} /> */}
+        <section
+          id='services'
+          className='service-area-four pt-110 rpt-85 rpb-70'
+          style={{
+            backgroundImage: 'url(assets/images/hero/hero-two-bg.png)',
+          }}>
+          <div className='container'>
+            <div className='row justify-content-center'>
+              <div className='col-lg-7'>
+                <div className='section-title wow fadeInUp delay-0-2s mb-60 text-center'>
+                  <div className='tag-image'>
+                    <img
+                      src={
+                        (blogs?.tagData?.at(0)?.tagImage as Media)?.url || ''
+                      }
+                      alt={
+                        (blogs?.tagData?.at(0)?.tagImage as Media)?.alt || ''
+                      }
+                    />
+                  </div>
+                  <h2 className=' mb-15'>{blogs?.tagData?.at(0)?.title}</h2>
+                  <span>{blogs?.tagData?.at(0)?.description}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {blogs?.blogsData?.length !== 0 ? (
-          <BentoGridDemo blogsData={blogs?.blogsData as Blog[]} />
+          <Blogs blogsData={blogs?.blogsData as Blog[]} />
         ) : (
           <p>Tag is not present</p>
         )}
