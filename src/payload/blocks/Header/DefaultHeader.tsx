@@ -1,5 +1,6 @@
 'use client'
 
+import { Media, SiteSetting } from '@payload-types'
 import Link from 'next/link'
 import { useEffect } from 'react'
 
@@ -8,14 +9,21 @@ import { sidebarClick, sidebarSignUpClick, stickyNav } from '@/utils/nav'
 import Nav from './Nav'
 import NavSearch from './NavSearch'
 
-const DefaultHeader = ({ singleMenu, dark }: any) => {
+const DefaultHeader = ({
+  singleMenu,
+  dark,
+  headerData,
+}: {
+  singleMenu: boolean
+  dark: boolean
+  headerData: SiteSetting['header']
+}) => {
   useEffect(() => {
     stickyNav()
     // animation()
     sidebarClick()
     sidebarSignUpClick()
   }, [])
-
   return (
     <header className='main-header menu-absolute'>
       {/*Header-Upper*/}
@@ -28,11 +36,9 @@ const DefaultHeader = ({ singleMenu, dark }: any) => {
                   <a>
                     <img
                       src={
-                        dark
-                          ? 'assets/images/logos/logo-white.png'
-                          : 'assets/images/logos/logo.png'
+                        (dark && (headerData?.logo_image as Media)?.url) || ''
                       }
-                      alt='Logo'
+                      alt={(headerData?.logo_image as Media)?.url || 'Logo'}
                       title='Logo'
                     />
                   </a>
@@ -41,7 +47,10 @@ const DefaultHeader = ({ singleMenu, dark }: any) => {
             </div>
             <div className='nav-outer ms-lg-auto clearfix'>
               {/* Main Menu */}
-              <Nav singleMenu={singleMenu} />
+              <Nav
+                singleMenu={singleMenu}
+                headerLinks={headerData?.menuItems}
+              />
               {/* Main Menu End*/}
             </div>
             {/* Nav Search */}

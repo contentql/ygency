@@ -1,9 +1,16 @@
+import { SiteSetting } from '@payload-types'
 import Link from 'next/link'
 import { Accordion } from 'react-bootstrap'
 
 import Menu from './Menu'
 
-const Nav = ({ singleMenu }: any) => {
+const Nav = ({
+  singleMenu,
+  headerLinks,
+}: {
+  singleMenu: boolean
+  headerLinks: Required<SiteSetting>['header']['menuItems']
+}) => {
   return (
     <nav className='main-menu navbar-expand-lg'>
       <Accordion>
@@ -32,7 +39,7 @@ const Nav = ({ singleMenu }: any) => {
         <Accordion.Collapse
           eventKey='navbar-collapse'
           className='navbar-collapse clearfix'>
-          <Menu singleMenu={singleMenu} />
+          <Menu singleMenu={singleMenu} headerLinks={headerLinks} />
         </Accordion.Collapse>
       </Accordion>
     </nav>
