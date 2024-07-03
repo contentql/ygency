@@ -34,6 +34,8 @@ import ServiceFeatures from './Services/ServiceFeatures'
 import { ServiceFeatures_Block } from './Services/ServiceFeatures/block'
 import WorkProcess from './Services/WorkProcess'
 import { WorkProcess_Block } from './Services/WorkProcess/block'
+import TagDescription from './Tag/TagDescription'
+import { TagDescription_Block } from './Tag/TagDescription/block'
 
 export const blocksJSX = {
   Advertise,
@@ -53,6 +55,7 @@ export const blocksJSX = {
   ServiceBanner,
   ServiceFeatures,
   WorkProcess,
+  TagDescription,
 }
 
 export type SlugType = keyof typeof blocksJSX
@@ -75,4 +78,5 @@ export const blocks = [
   ServiceBanner_Block,
   ServiceFeatures_Block,
   WorkProcess_Block,
+  TagDescription_Block,
 ]
