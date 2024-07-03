@@ -7,7 +7,7 @@ const PageBanner = ({ pageName }: any) => {
       style={{ backgroundImage: 'url(assets/images/banner/banner-bg.jpg)' }}>
       <div className='container'>
         <div className='banner-inner rpt-10'>
-          <h2 className='page-title wow fadeInUp delay-0-2s'>{pageName}</h2>
+          <h2 className='page-title wow fadeInUp delay-0-2s'>Blog Grid</h2>
           <nav aria-label='breadcrumb'>
             <ol className='breadcrumb justify-content-center wow fadeInUp delay-0-4s'>
               <li className='breadcrumb-item'>
@@ -15,7 +15,7 @@ const PageBanner = ({ pageName }: any) => {
                   Home
                 </Link>
               </li>
-              <li className='breadcrumb-item active'>{pageName}</li>
+              <li className='breadcrumb-item active'>Blog Grid</li>
             </ol>
           </nav>
         </div>

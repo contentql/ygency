@@ -256,7 +256,6 @@ const LexicalContent: React.FC<{
             <img
               key={ix}
               width={1000}
-              height={1000}
               src={upload?.url}
               loading={lazyLoadImages ? 'lazy' : 'eager'}
               fetchPriority={lazyLoadImages ? 'low' : 'high'}

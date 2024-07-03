@@ -127,14 +127,11 @@ export interface Tag {
  */
 export interface Blog {
   id: string;
-  author?:
-    | {
-        relationTo: 'users';
-        value: string | User;
-      }[]
-    | null;
-  select_blog_size?: ('1' | '2') | null;
-  title: string;
+  author?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  blog_title: string;
   slug?: string | null;
   tags?:
     | {
@@ -142,7 +139,6 @@ export interface Blog {
         value: string | Tag;
       }[]
     | null;
-  sub_title: string;
   blog_image: string | Media;
   description: {
     root: {
@@ -196,7 +192,6 @@ export interface Page {
         | ServiceBannerType
         | ServiceFeaturesType
         | WorkProcessType
-        | BlogType
       )[]
     | null;
   slug?: string | null;
@@ -524,16 +519,6 @@ export interface WorkProcessType {
   id?: string | null;
   blockName?: string | null;
   blockType: 'WorkProcess';
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "BlogType".
- */
-export interface BlogType {
-  title: string;
-  id?: string | null;
-  blockName?: string | null;
-  blockType: 'Blog';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

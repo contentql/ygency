@@ -2,11 +2,10 @@
 
 import { Blog, Tag } from '@payload-types'
 
-import { BentoGridDemo } from '@/components/marketing/blog/BentoGridDemo'
 import { trpc } from '@/trpc/client'
 
-import BlogHeroSection from './BlogHeroSection'
-import { TagsMarquee } from './TagsMarquee'
+import Blogs from './Blogs'
+import PageBanner from './PageBanner'
 
 interface TagsDetails extends Tag {
   count: number
@@ -18,12 +17,13 @@ const AllBlogs = ({ blogsData }: { blogsData: Blog[] }) => {
   })
 
   const { data: tagsDetails } = trpc.tag.getAllTags.useQuery()
-
   return (
-    <div className='overflow-hidden'>
-      <BlogHeroSection blogsData={blogsData} />
-      <TagsMarquee tagsDetails={tagsDetails as TagsDetails[]} />
-      <BentoGridDemo blogsData={blogs} />
+    <div>
+      <PageBanner />
+
+      {/* Blog Page Area start */}
+      <Blogs blogsData={blogs} />
+      {/* Blog Page Area end */}
     </div>
   )
 }
