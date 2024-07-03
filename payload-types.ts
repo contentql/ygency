@@ -196,6 +196,7 @@ export interface Page {
         | ServiceBannerType
         | ServiceFeaturesType
         | WorkProcessType
+        | TagDescriptionType
       )[]
     | null;
   slug?: string | null;
@@ -523,6 +524,17 @@ export interface WorkProcessType {
   id?: string | null;
   blockName?: string | null;
   blockType: 'WorkProcess';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "TagDescriptionType".
+ */
+export interface TagDescriptionType {
+  title?: string | null;
+  description?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'TagDescription';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
