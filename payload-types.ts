@@ -463,6 +463,7 @@ export interface TeamInfoType {
     | {
         title?: string | null;
         description?: string | null;
+        icon?: ('flaticon-creativity' | 'flaticon-mobile-banking' | 'flaticon-optimization-1') | null;
         id?: string | null;
       }[]
     | null;
@@ -487,8 +488,7 @@ export interface VideoAreaType {
  * via the `definition` "ServiceBannerType".
  */
 export interface ServiceBannerType {
-  first_title: string;
-  last_title: string;
+  title: string;
   id?: string | null;
   blockName?: string | null;
   blockType: 'ServiceBanner';

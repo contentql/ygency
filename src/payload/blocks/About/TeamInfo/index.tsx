@@ -1,11 +1,5 @@
 import { TeamInfoType } from '@payload-types'
 
-const listOfIcons = [
-  'flaticon-creativity',
-  'flaticon-mobile-banking',
-  'flaticon-optimization-1',
-]
-
 const TeamInfo = (data: TeamInfoType) => {
   return (
     <section className='who-we-are-area pt-100 rpt-80 pb-75 rpb-45 rel z-1'>
@@ -23,7 +17,7 @@ const TeamInfo = (data: TeamInfoType) => {
             <div key={index} className='col-lg-4 col-md-6'>
               <div className='why-choose-item style-two wow fadeInUp delay-0-2s'>
                 <div className='why-choose-header'>
-                  <i className={listOfIcons[index]} />
+                  <i className={feature?.icon!} />
                   <h5>{feature?.title}</h5>
                 </div>
                 <p>{feature?.description}</p>

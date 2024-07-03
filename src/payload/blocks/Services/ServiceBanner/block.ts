@@ -10,15 +10,9 @@ export const ServiceBanner_Block: Block = {
   },
   fields: [
     {
-      name: 'first_title',
+      name: 'title',
       type: 'text',
-      label: 'First Title',
-      required: true,
-    },
-    {
-      name: 'last_title',
-      type: 'text',
-      label: 'Last Title',
+      label: 'Title',
       required: true,
     },
   ],

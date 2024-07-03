@@ -33,6 +33,18 @@ export const TeamInfo_Block: Block = {
           type: 'text',
           label: 'Description',
         },
+        {
+          name: 'icon',
+          type: 'select',
+          options: [
+            { label: 'Creativity', value: 'flaticon-creativity' },
+            {
+              label: 'Mobile Banking',
+              value: 'flaticon-mobile-banking',
+            },
+            { label: 'Optimization', value: 'flaticon-optimization-1' },
+          ],
+        },
       ],
     },
   ],
