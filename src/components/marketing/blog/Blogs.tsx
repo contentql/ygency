@@ -42,7 +42,7 @@ const Blogs = ({ blogsData }: { blogsData: Blog[] }) => {
               </div>
             </div>
           ))}
-          <div className='col-lg-12'>
+          {/* <div className='col-lg-12'>
             <ul className='pagination justify-content-center wow fadeInUp delay-0-2s mt-10 flex-wrap'>
               <li className='page-item disabled'>
                 <span className='page-link'>
@@ -79,7 +79,7 @@ const Blogs = ({ blogsData }: { blogsData: Blog[] }) => {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
