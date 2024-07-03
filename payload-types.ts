@@ -142,7 +142,7 @@ export interface Blog {
         value: string | Tag;
       }[]
     | null;
-  sub_title: string;
+  sub_title?: string | null;
   blog_image: string | Media;
   description: {
     root: {
@@ -196,7 +196,6 @@ export interface Page {
         | ServiceBannerType
         | ServiceFeaturesType
         | WorkProcessType
-        | BlogType
       )[]
     | null;
   slug?: string | null;
@@ -463,6 +462,7 @@ export interface TeamInfoType {
     | {
         title?: string | null;
         description?: string | null;
+        icon?: ('flaticon-creativity' | 'flaticon-mobile-banking' | 'flaticon-optimization-1') | null;
         id?: string | null;
       }[]
     | null;
@@ -487,8 +487,7 @@ export interface VideoAreaType {
  * via the `definition` "ServiceBannerType".
  */
 export interface ServiceBannerType {
-  first_title: string;
-  last_title: string;
+  title: string;
   id?: string | null;
   blockName?: string | null;
   blockType: 'ServiceBanner';
@@ -524,16 +523,6 @@ export interface WorkProcessType {
   id?: string | null;
   blockName?: string | null;
   blockType: 'WorkProcess';
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "BlogType".
- */
-export interface BlogType {
-  title: string;
-  id?: string | null;
-  blockName?: string | null;
-  blockType: 'Blog';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

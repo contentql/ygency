@@ -1,11 +1,18 @@
+import { Page, SiteSetting } from '@payload-types'
 import Link from 'next/link'
 import { Fragment, useState } from 'react'
 
-const Menu = ({ singleMenu }: any) => {
+const Menu = ({
+  singleMenu,
+  headerLinks,
+}: {
+  singleMenu: boolean
+  headerLinks: Required<SiteSetting>['header']['menuItems']
+}) => {
   return (
     <Fragment>
       {singleMenu ? (
-        <SingleMenu />
+        <SingleMenu headerLinks={headerLinks} />
       ) : (
         <Fragment>
           <DaskTopMenu />
@@ -491,27 +498,20 @@ const MobileMenu = () => {
   )
 }
 
-const SingleMenu = () => {
+const SingleMenu = ({
+  headerLinks,
+}: {
+  headerLinks: Required<SiteSetting>['header']['menuItems']
+}) => {
   return (
     <ul className='navigation onepage clearfix'>
-      <li>
-        <a href='#home'>Home</a>
-      </li>
-      <li>
-        <a href='#about'>about</a>
-      </li>
-      <li>
-        <a href='#services'>services</a>
-      </li>
-      <li>
-        <a href='#projects'>project</a>
-      </li>
-      <li>
-        <a href='#pricing'>pricing</a>
-      </li>
-      <li>
-        <a href='#news'>news</a>
-      </li>
+      {headerLinks?.map((link, index) => (
+        <li key={index}>
+          <a href={(link?.page?.value as Page)?.path || ''}>
+            {(link?.page?.value as Page)?.title}
+          </a>
+        </li>
+      ))}
     </ul>
   )
 }

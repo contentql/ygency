@@ -20,11 +20,11 @@ export default async function Layout({
     draft: false,
   })
   const user = await getCurrentUser()
-
+  console.log('initData', initData)
   return (
     <div className='flex min-h-screen flex-col'>
       {/* Navbar */}
-      <DefaultHeader singleMenu={true} dark />
+      <DefaultHeader headerData={initData?.header} singleMenu={true} dark />
       <SignInSideBar />
       <SignUpSideBar />
       <div className='flex-grow'>{children}</div>

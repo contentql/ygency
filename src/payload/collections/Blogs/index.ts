@@ -119,7 +119,6 @@ export const Blogs: CollectionConfig = {
       name: 'sub_title',
       label: 'Sub Title',
       type: 'text',
-      required: true,
     },
     {
       name: 'blog_image',
