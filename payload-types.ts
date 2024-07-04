@@ -197,6 +197,7 @@ export interface Page {
         | ServiceFeaturesType
         | WorkProcessType
         | TagDescriptionType
+        | AuthorDescriptionType
       )[]
     | null;
   slug?: string | null;
@@ -535,6 +536,18 @@ export interface TagDescriptionType {
   id?: string | null;
   blockName?: string | null;
   blockType: 'TagDescription';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "AuthorDescriptionType".
+ */
+export interface AuthorDescriptionType {
+  sub_title?: string | null;
+  title?: string | null;
+  description?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'AuthorDescription';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
