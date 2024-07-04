@@ -1,9 +1,17 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import CountUp from 'react-countup'
 
 const Counter = ({ end, decimals, extraClass }: any) => {
-  if (!window) return
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  if (!isClient) return null
+
   return (
     <CountUp
       end={end ? end : 100}
