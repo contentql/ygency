@@ -4313,9 +4313,9 @@ h6,
     -ms-transform: translateX(-50%) rotate(-45deg);
     transform: translateX(-50%) rotate(-45deg);
   }
-  .main-menu .navbar-collapse > ul > li > a:hover:before {
+  /* .main-menu .navbar-collapse > ul > li > a:hover:before {
     opacity: 1;
-  }
+  } */
 }
 @media only screen and (max-width: 991px) {
   .main-menu .navbar-collapse {
