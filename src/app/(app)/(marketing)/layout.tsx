@@ -24,7 +24,7 @@ export default async function Layout({
   return (
     <div className='flex min-h-screen flex-col'>
       {/* Navbar */}
-      <DefaultHeader headerData={initData?.header} singleMenu={true} dark />
+      <DefaultHeader headerData={initData?.header!} singleMenu={true} dark />
       <SignInSideBar />
       <SignUpSideBar />
       <div className='flex-grow'>{children}</div>

@@ -1,4 +1,4 @@
-import { SiteSetting } from '@payload-types'
+import { Media, SiteSetting } from '@payload-types'
 import Link from 'next/link'
 import { Accordion } from 'react-bootstrap'
 
@@ -6,10 +6,10 @@ import Menu from './Menu'
 
 const Nav = ({
   singleMenu,
-  headerLinks,
+  headerData,
 }: {
   singleMenu: boolean
-  headerLinks: Required<SiteSetting>['header']['menuItems']
+  headerData: SiteSetting['header']
 }) => {
   return (
     <nav className='main-menu navbar-expand-lg'>
@@ -19,9 +19,10 @@ const Nav = ({
             <Link legacyBehavior href='/'>
               <a>
                 <img
-                  src='assets/images/logos/logo.png'
-                  alt='Logo'
+                  src={(headerData?.logo_image as Media)?.url || ''}
+                  alt={(headerData?.logo_image as Media)?.alt || 'Logo'}
                   title='Logo'
+                  style={{ width: '100px', height: 'auto' }}
                 />
               </a>
             </Link>
@@ -39,7 +40,7 @@ const Nav = ({
         <Accordion.Collapse
           eventKey='navbar-collapse'
           className='navbar-collapse clearfix'>
-          <Menu singleMenu={singleMenu} headerLinks={headerLinks} />
+          <Menu singleMenu={singleMenu} headerLinks={headerData?.menuItems} />
         </Accordion.Collapse>
       </Accordion>
     </nav>

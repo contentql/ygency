@@ -10,6 +10,8 @@ import TeamInfo from './About/TeamInfo'
 import { TeamInfo_Block } from './About/TeamInfo/block'
 import VideoArea from './About/VideoArea'
 import { VideoArea_Block } from './About/VideoArea/block'
+import AuthorDescription from './Author/AuthorDescription'
+import { AuthorDescription_Block } from './Author/AuthorDescription/block'
 import About from './Home/About'
 import { About_Block } from './Home/About/block'
 import Advertise from './Home/AdvertiseArea'
@@ -56,6 +58,7 @@ export const blocksJSX = {
   ServiceFeatures,
   WorkProcess,
   TagDescription,
+  AuthorDescription,
 }
 
 export type SlugType = keyof typeof blocksJSX
@@ -79,4 +82,5 @@ export const blocks = [
   ServiceFeatures_Block,
   WorkProcess_Block,
   TagDescription_Block,
+  AuthorDescription_Block,
 ]

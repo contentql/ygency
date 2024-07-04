@@ -38,8 +38,9 @@ const DefaultHeader = ({
                       src={
                         (dark && (headerData?.logo_image as Media)?.url) || ''
                       }
-                      alt={(headerData?.logo_image as Media)?.url || 'Logo'}
+                      alt={(headerData?.logo_image as Media)?.alt || 'Logo'}
                       title='Logo'
+                      style={{ width: '100px', height: 'auto' }}
                     />
                   </a>
                 </Link>
@@ -47,10 +48,7 @@ const DefaultHeader = ({
             </div>
             <div className='nav-outer ms-lg-auto clearfix'>
               {/* Main Menu */}
-              <Nav
-                singleMenu={singleMenu}
-                headerLinks={headerData?.menuItems}
-              />
+              <Nav singleMenu={singleMenu} headerData={headerData} />
               {/* Main Menu End*/}
             </div>
             {/* Nav Search */}
