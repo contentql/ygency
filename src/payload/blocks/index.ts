@@ -30,6 +30,14 @@ import Team from './Home/Team'
 import { Team_Block } from './Home/Team/block'
 import Testimonial from './Home/Testimonial'
 import { Testimonial_Block } from './Home/Testimonial/block'
+import { Contact_Block } from './Pricing/Contact/block'
+import Contact from './Pricing/Contact/indxe'
+import PageBanner from './Pricing/PageBanner'
+import { PageBanner_Block } from './Pricing/PageBanner/block'
+import PricingFeatures from './Pricing/PricingFeatures'
+import { PricingFeatures_Block } from './Pricing/PricingFeatures/block'
+import PricingSection from './Pricing/PricingSection'
+import { PricingSection_Block } from './Pricing/PricingSection/block'
 import ServiceBanner from './Services/ServiceBanner'
 import { ServiceBanner_Block } from './Services/ServiceBanner/block'
 import ServiceFeatures from './Services/ServiceFeatures'
@@ -59,6 +67,10 @@ export const blocksJSX = {
   WorkProcess,
   TagDescription,
   AuthorDescription,
+  PageBanner,
+  PricingFeatures,
+  PricingSection,
+  Contact,
 }
 
 export type SlugType = keyof typeof blocksJSX
@@ -83,4 +95,8 @@ export const blocks = [
   WorkProcess_Block,
   TagDescription_Block,
   AuthorDescription_Block,
+  PageBanner_Block,
+  PricingFeatures_Block,
+  PricingSection_Block,
+  Contact_Block,
 ]
