@@ -1,7 +1,7 @@
 import { User } from '@payload-types'
 
-import AuthorBlogs from '@/components/marketing/author/AuthorBlogs'
 import AuthorDetails from '@/components/marketing/author/AuthorDetails'
+import Blogs from '@/components/marketing/blog/Blogs'
 import { serverClient } from '@/trpc/serverClient'
 
 interface PageProps {
@@ -22,7 +22,7 @@ const Author = async ({ params }: PageProps) => {
     return (
       <>
         <AuthorDetails author={author as User} />
-        <AuthorBlogs blogs={blogs} />
+        <Blogs blogsData={blogs} />
       </>
     )
   } catch (error) {
