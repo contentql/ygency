@@ -198,6 +198,10 @@ export interface Page {
         | WorkProcessType
         | TagDescriptionType
         | AuthorDescriptionType
+        | PageBannerType
+        | PricingFeaturesType
+        | PricingSectionType
+        | ContactType
       )[]
     | null;
   slug?: string | null;
@@ -548,6 +552,86 @@ export interface AuthorDescriptionType {
   id?: string | null;
   blockName?: string | null;
   blockType: 'AuthorDescription';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "PageBannerType".
+ */
+export interface PageBannerType {
+  page_name: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'PageBanner';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "PricingFeaturesType".
+ */
+export interface PricingFeaturesType {
+  sub_title?: string | null;
+  title?: string | null;
+  datails?:
+    | {
+        heading?: string | null;
+        description?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  button_text?: string | null;
+  button_path?: string | null;
+  features?:
+    | {
+        icons?: ('fa-bezier-curve' | 'fa-cogs' | 'fa-chart-pie' | 'fa-shield-cross') | null;
+        title?: string | null;
+        description?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'PricingFeatures';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "PricingSectionType".
+ */
+export interface PricingSectionType {
+  title?: string | null;
+  sub_title?: string | null;
+  pricing?:
+    | {
+        icons?: ('flaticon-abstract' | 'flaticon-liquid' | 'flaticon-petals') | null;
+        package_title?: string | null;
+        price?: number | null;
+        price_text?: string | null;
+        available_features?:
+          | {
+              feature?: string | null;
+              id?: string | null;
+            }[]
+          | null;
+        button_text?: string | null;
+        button_url?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'PricingSection';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ContactType".
+ */
+export interface ContactType {
+  sub_title?: string | null;
+  title?: string | null;
+  background_text?: string | null;
+  button_text?: string | null;
+  button_url?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Contact';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
