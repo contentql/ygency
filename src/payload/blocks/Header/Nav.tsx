@@ -22,7 +22,7 @@ const Nav = ({
                   src={(headerData?.logo_image as Media)?.url || ''}
                   alt={(headerData?.logo_image as Media)?.alt || 'Logo'}
                   title='Logo'
-                  style={{ width: '100px', height: 'auto' }}
+                  style={{ width: '150px', height: '50px' }}
                 />
               </a>
             </Link>
