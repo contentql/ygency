@@ -30,11 +30,11 @@ const Blogs = ({ blogsData }: { blogsData: Blog[] }) => {
                 </ul>
                 <hr />
                 <h4>
-                  <Link legacyBehavior href={`blog/${blog?.slug}`}>
+                  <Link legacyBehavior href={`/blog/${blog?.slug}`}>
                     <a>{blog?.title}</a>
                   </Link>
                 </h4>
-                <Link legacyBehavior href={`blog/${blog?.slug}`}>
+                <Link legacyBehavior href={`/blog/${blog?.slug}`}>
                   <a className='read-more'>
                     Read More <i className='far fa-arrow-right' />
                   </a>
