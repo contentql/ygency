@@ -32,7 +32,7 @@ const Hero = (data: HeroType) => {
           <div className='row align-items-center justify-content-between'>
             <div className='col-xl-3 col-lg-4'>
               <div className='hero-two-content mb-50 wow fadeInRight delay-0-2s'>
-                <p>{data?.description}</p>
+                <p className='line-clamp-4'>{data?.description}</p>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
 
                 <img
@@ -41,16 +41,18 @@ const Hero = (data: HeroType) => {
                   alt='Arrow'
                 />
                 <div className='authors-text mt-45'>
-                  {data?.clients?.map((ele, id) => (
+                  {data?.clients?.slice(0, 3)?.map((client, id) => (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
                       key={id}
-                      src={(ele?.image as Media)?.url as string}
+                      src={(client?.image as Media)?.url as string}
                       alt='Author'
                     />
                   ))}
                   <i className='fal fa-plus' />
-                  <span className='text'>{data?.client_description}</span>
+                  <span className='text line-clamp-2'>
+                    {data?.client_description}
+                  </span>
                 </div>
               </div>
             </div>

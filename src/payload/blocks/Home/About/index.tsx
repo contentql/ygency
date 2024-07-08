@@ -14,7 +14,7 @@ const About = (data: AboutType) => {
                 <h2>{data?.title}</h2>
               </div>
               <div className='text-left-border mb-65 wow fadeInUp delay-0-2s mt-60'>
-                <p>{data?.description}</p>
+                <p className='line-clamp-3'>{data?.description}</p>
               </div>
               <div className='about-counter'>
                 <div className='row'>

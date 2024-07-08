@@ -25,7 +25,7 @@ const Advertise = (data: AdvertiseType) => {
                 <span className='number'>{data?.project_completion_count}</span>
                 <h6>{data?.completion_status}</h6>
                 <hr />
-                <p>{data?.description}</p>
+                <p className='line-clamp-3'>{data?.description}</p>
               </div>
             </div>
           </div>
@@ -35,10 +35,10 @@ const Advertise = (data: AdvertiseType) => {
               style={{
                 backgroundImage: 'url(assets/images/banner/star-vector.png)',
               }}>
-              <h3>{data?.title}</h3>
+              <h3 className='line-clamp-2'>{data?.title}</h3>
               <hr className='mb-35' />
               <div className='authors-text'>
-                {data?.clients?.map((client, idx) => (
+                {data?.clients?.slice(0, 3)?.map((client, idx) => (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
                     key={idx}
@@ -48,7 +48,9 @@ const Advertise = (data: AdvertiseType) => {
                 ))}
 
                 <i className='fal fa-plus' />
-                <span className='text'>{data?.client_description}</span>
+                <span className='text line-clamp-2'>
+                  {data?.client_description}
+                </span>
               </div>
             </div>
           </div>

@@ -40,7 +40,7 @@ const DefaultHeader = ({
                       }
                       alt={(headerData?.logo_image as Media)?.alt || 'Logo'}
                       title='Logo'
-                      style={{ width: '150px', height: '50px' }}
+                      style={{ width: '150px', height: '40px' }}
                     />
                   </a>
                 </Link>
