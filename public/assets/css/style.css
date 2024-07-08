@@ -7143,6 +7143,7 @@ h6,
   -webkit-transform: translate(30px, -30px);
   -ms-transform: translate(30px, -30px);
   transform: translate(30px, -30px);
+  cursor: pointer;
 }
 .service-four-item .icon-btn .more-btn > i {
   -webkit-transform: rotate(-45deg);

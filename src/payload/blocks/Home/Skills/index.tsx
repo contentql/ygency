@@ -1,4 +1,5 @@
 import { Media, SkillsType } from '@payload-types'
+import Image from 'next/image'
 
 const Skills = (data: SkillsType) => {
   return (
@@ -15,9 +16,11 @@ const Skills = (data: SkillsType) => {
           {data?.skills?.map((skill, idx) => (
             <div key={idx} className='skill-item'>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={(skill?.skill_image as Media)?.url as string}
                 alt='Skill Icon'
+                height={35}
+                width={35}
               />
               <span className='text'>{skill?.skill_title}</span>
             </div>

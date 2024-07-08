@@ -1,6 +1,7 @@
 'use client'
 
 import { Media, TestimonialType } from '@payload-types'
+import Image from 'next/image'
 import {
   A11y,
   Autoplay,
@@ -21,9 +22,11 @@ const Testimonial = (data: TestimonialType) => {
           <div className='row'>
             <div className='col-lg-6'>
               <div className='image-border-shape rmb-20 wow fadeInRight delay-0-2s'>
-                <img
+                <Image
                   src={(data?.image as Media)?.url as string}
                   alt='Testimonial Left Image'
+                  height={534}
+                  width={429}
                 />
                 <div className='bottom-border' />
               </div>
@@ -75,12 +78,14 @@ const Testimonial = (data: TestimonialType) => {
                       <div className='testimonial-footer'>
                         <div className='testimonial-author'>
                           <div className='author-image'>
-                            <img
+                            <Image
                               src={
                                 (testimonial?.reviewer_image as Media)
                                   ?.url as string
                               }
                               alt='Author Image'
+                              height={65}
+                              width={65}
                             />
                           </div>
                           <div className='author-info'>

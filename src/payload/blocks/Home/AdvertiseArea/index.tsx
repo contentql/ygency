@@ -1,4 +1,5 @@
 import { AdvertiseType, Media } from '@payload-types'
+import Image from 'next/image'
 
 const Advertise = (data: AdvertiseType) => {
   return (
@@ -13,12 +14,14 @@ const Advertise = (data: AdvertiseType) => {
               }}>
               <div className='image'>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src={
                     ((data?.banner_image as Media)?.url as string) ||
                     'assets/images/banner/add-banner.png'
                   }
                   alt='Banner'
+                  height={325}
+                  width={274}
                 />
               </div>
               <div className='content mt-20'>
@@ -38,14 +41,17 @@ const Advertise = (data: AdvertiseType) => {
               <h3 className='line-clamp-2'>{data?.title}</h3>
               <hr className='mb-35' />
               <div className='authors-text'>
-                {data?.clients?.slice(0, 3)?.map((client, idx) => (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    key={idx}
-                    src={(client?.image as Media)?.url as string}
-                    alt='Author'
-                  />
-                ))}
+                {data?.clients
+                  ?.slice(0, 3)
+                  ?.map((client, idx) => (
+                    <Image
+                      key={idx}
+                      src={(client?.image as Media)?.url as string}
+                      alt='Author'
+                      height={50}
+                      width={50}
+                    />
+                  ))}
 
                 <i className='fal fa-plus' />
                 <span className='text line-clamp-2'>

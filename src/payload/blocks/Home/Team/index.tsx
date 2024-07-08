@@ -1,4 +1,5 @@
 import { Media, TeamType } from '@payload-types'
+import Image from 'next/image'
 import Link from 'next/link'
 
 const Team = (data: TeamType) => {
@@ -21,9 +22,11 @@ const Team = (data: TeamType) => {
               <div className='team-member wow fadeInUp delay-0-3s'>
                 <div className='image'>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src={(member?.image as Media)?.url as string}
                     alt={member?.name as string}
+                    height={288}
+                    width={252}
                   />
                 </div>
                 <div className='content'>
