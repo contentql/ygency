@@ -3,6 +3,7 @@
 import { Media, TestimonialType } from '@payload-types'
 import {
   A11y,
+  Autoplay,
   EffectCreative,
   Navigation,
   Pagination,
@@ -36,11 +37,23 @@ const Testimonial = (data: TestimonialType) => {
                     Scrollbar,
                     A11y,
                     EffectCreative,
+                    Autoplay,
                   ]}
                   spaceBetween={50}
                   slidesPerView={1}
                   loop={true}
-                  autoplay={true}
+                  pagination={{
+                    el: '.testimonial-dots .slick-dots',
+                    clickable: true,
+                  }}
+                  navigation={{
+                    nextEl: '.testimonial-next',
+                    prevEl: '.testimonial-prev',
+                  }}
+                  autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                  }}
                   creativeEffect={{
                     prev: {
                       shadow: true,
@@ -50,7 +63,6 @@ const Testimonial = (data: TestimonialType) => {
                       translate: ['100%', 0, 0],
                     },
                   }}
-                  pagination={{ clickable: true }}
                   scrollbar={{ draggable: true }}>
                   {data?.testimonials?.map((testimonial, idx) => (
                     <SwiperSlide key={idx} className='testimonial-item'>
@@ -83,6 +95,17 @@ const Testimonial = (data: TestimonialType) => {
                     </SwiperSlide>
                   ))}
                 </Swiper>
+                <div className='testimonial-controls mt-75 rmt-40 wow fadeInUp delay-0-2s'>
+                  <button className='testimonial-prev slick-arrow'>
+                    <i className='far fa-chevron-left' />
+                  </button>
+                  <div className='testimonial-dots'>
+                    <div className='slick-dots'></div>
+                  </div>
+                  <button className='testimonial-next slick-arrow'>
+                    <i className='far fa-chevron-right' />
+                  </button>
+                </div>
               </div>
             </div>
           </div>
