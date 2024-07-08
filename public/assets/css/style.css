@@ -12164,6 +12164,7 @@ blockquote .blockquote-footer:before {
   margin: 0 30px 30px;
   -webkit-filter: grayscale(1) opacity(0.2);
   filter: grayscale(1) opacity(0.2);
+  cursor: pointer;
 }
 .client-logo-wrap .client-logo-item:hover {
   -webkit-filter: grayscale(0) opacity(1);
