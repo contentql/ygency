@@ -23,9 +23,9 @@ const PricingFeatures = (data: PricingFeaturesType) => {
                   ))}
 
                   <Link legacyBehavior href={data?.button_path || '/'}>
-                    <a className='theme-btn style-two mt-35'>
+                    <span className='theme-btn style-two mt-35'>
                       {data?.button_text} <i className='far fa-arrow-right' />
-                    </a>
+                    </span>
                   </Link>
                 </div>
               </div>
@@ -42,7 +42,7 @@ const PricingFeatures = (data: PricingFeaturesType) => {
                       </div>
                       <h5>
                         <Link legacyBehavior href='/service-details'>
-                          <a className='line-clamp-2'>{feature?.title}</a>
+                          <span className='line-clamp-2'>{feature?.title}</span>
                         </Link>
                       </h5>
                       <p className='line-clamp-3'>{feature?.description}</p>
@@ -58,7 +58,7 @@ const PricingFeatures = (data: PricingFeaturesType) => {
                       </div>
                       <h5>
                         <Link legacyBehavior href='/service-details'>
-                          <a className='line-clamp-2'>{feature?.title}</a>
+                          <span className='line-clamp-2'>{feature?.title}</span>
                         </Link>
                       </h5>
                       <p className='line-clamp-3'>{feature?.description}</p>

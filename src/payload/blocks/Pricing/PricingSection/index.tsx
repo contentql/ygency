@@ -37,9 +37,9 @@ const PricingSection = (data: PricingSectionType) => {
                   ))}
                 </ul>
                 <Link legacyBehavior href={item?.button_url || '/'}>
-                  <a className='theme-btn w-100'>
+                  <span className='theme-btn w-100'>
                     {item?.button_text} <i className='far fa-arrow-right' />
-                  </a>
+                  </span>
                 </Link>
               </div>
             </div>
