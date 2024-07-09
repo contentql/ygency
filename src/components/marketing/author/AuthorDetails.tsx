@@ -2,7 +2,6 @@ import { User } from '@payload-types'
 import Image from 'next/image'
 
 const AuthorDetails = ({ author }: { author: User }) => {
-  console.log('author........', author)
   return (
     <section
       id='services'
