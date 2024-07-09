@@ -1,4 +1,5 @@
 import { Media, RecentWorkType } from '@payload-types'
+import Image from 'next/image'
 import Link from 'next/link'
 
 const RecentWork = (data: RecentWorkType) => {
@@ -14,9 +15,9 @@ const RecentWork = (data: RecentWorkType) => {
           </div>
           <div className='col-xl-6 col-lg-4 text-lg-end'>
             <Link legacyBehavior href='/projects'>
-              <a className='explore-more rmb-50 wow fadeInRight delay-0-2s'>
+              <span className='explore-more rmb-50 wow fadeInRight delay-0-2s'>
                 <i className='fas fa-arrow-right' /> <span>Explore more</span>
-              </a>
+              </span>
             </Link>
           </div>
         </div>
@@ -27,24 +28,26 @@ const RecentWork = (data: RecentWorkType) => {
                 <span className='serial-number'>{idx + 1}</span>
                 <h4>
                   <Link legacyBehavior href='/project-details'>
-                    <a>{recentWork?.title}</a>
+                    {recentWork?.title}
                   </Link>
                 </h4>
                 <div className='image'>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
 
-                  <img
+                  <Image
                     src={
                       ((recentWork?.image as Media)?.url as string) ||
                       'assets/images/projects/project-timeline-two1.jpg'
                     }
                     alt={recentWork?.title as string}
+                    width={298}
+                    height={224}
                   />
                 </div>
                 <div className='right-btn'>
-                  <a href='#'>
+                  <Link href='#'>
                     <i className='fal fa-long-arrow-right' />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

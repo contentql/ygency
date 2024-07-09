@@ -1,13 +1,13 @@
 'use client'
 
 import { Media, SiteSetting } from '@payload-types'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect } from 'react'
 
 import { sidebarClick, sidebarSignUpClick, stickyNav } from '@/utils/nav'
 
 import Nav from './Nav'
-import NavSearch from './NavSearch'
 
 const DefaultHeader = ({
   singleMenu,
@@ -33,16 +33,13 @@ const DefaultHeader = ({
             <div className='logo-outer'>
               <div className='logo'>
                 <Link legacyBehavior href='/'>
-                  <a>
-                    <img
-                      src={
-                        (dark && (headerData?.logo_image as Media)?.url) || ''
-                      }
-                      alt={(headerData?.logo_image as Media)?.alt || 'Logo'}
-                      title='Logo'
-                      style={{ width: '150px', height: '50px' }}
-                    />
-                  </a>
+                  <Image
+                    src={(dark && (headerData?.logo_image as Media)?.url) || ''}
+                    alt={(headerData?.logo_image as Media)?.alt || 'Logo'}
+                    title='Logo'
+                    height={40}
+                    width={150}
+                  />
                 </Link>
               </div>
             </div>
@@ -52,7 +49,7 @@ const DefaultHeader = ({
               {/* Main Menu End*/}
             </div>
             {/* Nav Search */}
-            <NavSearch />
+            {/* <NavSearch /> */}
             {/* Menu Button */}
             <div className='menu-btns'>
               <div className='menu-sidebar'>

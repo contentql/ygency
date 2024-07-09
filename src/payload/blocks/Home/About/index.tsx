@@ -1,4 +1,5 @@
 import { AboutType, Media } from '@payload-types'
+import Image from 'next/image'
 
 import Counter from '@/components/common/Counter'
 
@@ -14,7 +15,7 @@ const About = (data: AboutType) => {
                 <h2>{data?.title}</h2>
               </div>
               <div className='text-left-border mb-65 wow fadeInUp delay-0-2s mt-60'>
-                <p>{data?.description}</p>
+                <p className='line-clamp-3'>{data?.description}</p>
               </div>
               <div className='about-counter'>
                 <div className='row'>
@@ -37,12 +38,14 @@ const About = (data: AboutType) => {
           </div>
           <div className='col-lg-5'>
             <div className='image-border-shape wow fadeInRight delay-0-2s'>
-              <img
+              <Image
                 src={
                   ((data?.about_image as Media)?.url as string) ||
                   'assets/images/about/about-image-shape.png'
                 }
                 alt='About Image Shape'
+                width={429}
+                height={534}
               />
               <div className='bottom-border' />
             </div>

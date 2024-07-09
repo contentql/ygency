@@ -11,10 +11,10 @@ const Contact = (data: ContactType) => {
               <span className='sub-title mb-15'>{data?.sub_title}</span>
               <h2>{data?.title}</h2>
               <Link legacyBehavior href={data?.button_url || '/'}>
-                <a className='explore-more mt-30 text-start'>
+                <span className='explore-more mt-30 text-start'>
                   <i className='fas fa-arrow-right' />{' '}
                   <span>{data?.button_text}</span>
-                </a>
+                </span>
               </Link>
             </div>
           </div>

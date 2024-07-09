@@ -1,4 +1,5 @@
 import { Media, OurClientsType } from '@payload-types'
+import Image from 'next/image'
 import Link from 'next/link'
 
 const OurClients = (data: OurClientsType) => {
@@ -11,13 +12,14 @@ const OurClients = (data: OurClientsType) => {
         <div className='client-logo-wrap'>
           {data?.clients?.map((client, index) => (
             <Link key={index} legacyBehavior href='/contact'>
-              <a className='client-logo-item wow fadeInUp delay-0-2s'>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+              <span className='client-logo-item wow fadeInUp delay-0-2s'>
+                <Image
                   src={(client?.client_logo as Media)?.url || ''}
                   alt={(client?.client_logo as Media)?.alt || ''}
+                  height={50}
+                  width={150}
                 />
-              </a>
+              </span>
             </Link>
           ))}
         </div>

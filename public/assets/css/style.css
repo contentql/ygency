@@ -618,6 +618,7 @@ a.theme-btn.style-three {
   -ms-flex-direction: column;
   flex-direction: column;
   background: var(--ygency-primary-color);
+  cursor: pointer;
 }
 .explore-more i {
   text-align: center;
@@ -658,6 +659,7 @@ a.theme-btn.style-three {
   text-decoration: underline;
   text-transform: capitalize;
   text-underline-position: under;
+  cursor: pointer;
 }
 .read-more i {
   float: right;
@@ -4218,6 +4220,7 @@ h6,
   -webkit-box-flex: 0;
   -ms-flex: none;
   flex: none;
+  cursor: pointer;
 }
 @media only screen and (max-width: 991px) {
   .main-header .logo-outer {
@@ -4264,6 +4267,7 @@ h6,
 
 .main-menu .mobile-logo {
   margin-right: auto;
+  cursor: pointer;
 }
 @media only screen and (max-width: 575px) {
   .main-menu .mobile-logo {
@@ -6748,6 +6752,7 @@ h6,
   -o-transition: 0.5s;
   transition: 0.5s;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 .service-item p {
   -webkit-transition: 0.5s;
@@ -7143,6 +7148,7 @@ h6,
   -webkit-transform: translate(30px, -30px);
   -ms-transform: translate(30px, -30px);
   transform: translate(30px, -30px);
+  cursor: pointer;
 }
 .service-four-item .icon-btn .more-btn > i {
   -webkit-transform: rotate(-45deg);
@@ -7732,6 +7738,7 @@ h6,
   color: var(--ygency-primary-color);
   margin-top: 15px;
   text-decoration: none;
+  cursor: pointer;
 }
 .blog-item.style-two {
   margin-bottom: 45px;
@@ -8295,10 +8302,11 @@ blockquote .blockquote-footer:before {
 .admin-comment .comment-body .content p {
   font-size: 16px;
 }
-.admin-comment .comment-body .content .social-style-one a {
+.admin-comment .comment-body .content .social-style-one span {
   margin-right: 25px;
+  cursor: pointer;
 }
-.admin-comment .comment-body .content .social-style-one a:hover {
+.admin-comment .comment-body .content .social-style-one span:hover {
   color: var(--ygency-primary-color);
 }
 
@@ -10825,6 +10833,7 @@ blockquote .blockquote-footer:before {
   color: var(--ygency-primary-color);
   border: none;
   line-height: 85px;
+  cursor: pointer;
 }
 .feature-item-three .content h4 {
   margin-bottom: 20px;
@@ -12163,6 +12172,7 @@ blockquote .blockquote-footer:before {
   margin: 0 30px 30px;
   -webkit-filter: grayscale(1) opacity(0.2);
   filter: grayscale(1) opacity(0.2);
+  cursor: pointer;
 }
 .client-logo-wrap .client-logo-item:hover {
   -webkit-filter: grayscale(0) opacity(1);
@@ -12413,14 +12423,15 @@ blockquote .blockquote-footer:before {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: -20px -10px 0;
+  cursor: pointer;
 }
-.gallery a {
+.gallery span {
   margin: 20px 10px 0;
   z-index: 1;
   position: relative;
   max-width: calc(33.333% - 20px);
 }
-.gallery a::before {
+.gallery span::before {
   position: absolute;
   content: '';
   width: 100%;
@@ -12431,13 +12442,13 @@ blockquote .blockquote-footer:before {
   opacity: 0;
   background-color: #000000;
 }
-.gallery a:before {
+.gallery span:before {
   z-index: 1;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-.gallery a i {
+.gallery span i {
   z-index: 2;
   position: absolute;
   left: 50%;
@@ -12451,10 +12462,10 @@ blockquote .blockquote-footer:before {
   -ms-transform: translate(-50%, -50%) rotate(-45deg);
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-.gallery a:hover:before {
+.gallery span:hover:before {
   opacity: 0.75;
 }
-.gallery a:hover i {
+.gallery span:hover i {
   opacity: 1;
 }
 
@@ -13242,6 +13253,15 @@ figure {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;

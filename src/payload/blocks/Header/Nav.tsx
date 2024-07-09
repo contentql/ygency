@@ -1,4 +1,5 @@
 import { Media, SiteSetting } from '@payload-types'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Accordion } from 'react-bootstrap'
 
@@ -17,14 +18,13 @@ const Nav = ({
         <div className='navbar-header py-10'>
           <div className='mobile-logo'>
             <Link legacyBehavior href='/'>
-              <a>
-                <img
-                  src={(headerData?.logo_image as Media)?.url || ''}
-                  alt={(headerData?.logo_image as Media)?.alt || 'Logo'}
-                  title='Logo'
-                  style={{ width: '150px', height: '50px' }}
-                />
-              </a>
+              <Image
+                src={(headerData?.logo_image as Media)?.url || ''}
+                alt={(headerData?.logo_image as Media)?.alt || 'Logo'}
+                title='Logo'
+                height={40}
+                width={150}
+              />
             </Link>
           </div>
           {/* Toggle Button */}

@@ -1,6 +1,7 @@
 'use client'
 
 import { HeroType, Media } from '@payload-types'
+import Image from 'next/image'
 import Link from 'next/link'
 
 // const Counter = dynamic(() => import('@/components/common/Counter'), {
@@ -20,11 +21,12 @@ const Hero = (data: HeroType) => {
           <h1 className='hero-title mb-100 rmb-50 wow fadeInUp delay-0-2s'>
             {firstWord}
             <span className='arrow'>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 className='wow fadeInLeft delay-0-6s'
-                src='assets/images/hero/title-arrow.png'
+                src='/assets/images/hero/title-arrow.png'
                 alt='Arrow'
+                width={481}
+                height={8}
               />
             </span>
             {restOfTheString}
@@ -32,43 +34,50 @@ const Hero = (data: HeroType) => {
           <div className='row align-items-center justify-content-between'>
             <div className='col-xl-3 col-lg-4'>
               <div className='hero-two-content mb-50 wow fadeInRight delay-0-2s'>
-                <p>{data?.description}</p>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-
-                <img
+                <p className='line-clamp-4'>{data?.description}</p>
+                <Image
                   className='mt-20'
-                  src='assets/images/hero/arrow.png'
+                  src='/assets/images/hero/arrow.png'
                   alt='Arrow'
+                  width={301}
+                  height={8}
                 />
                 <div className='authors-text mt-45'>
-                  {data?.clients?.map((ele, id) => (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      key={id}
-                      src={(ele?.image as Media)?.url as string}
-                      alt='Author'
-                    />
-                  ))}
+                  {data?.clients
+                    ?.slice(0, 3)
+                    ?.map((client, id) => (
+                      <Image
+                        key={id}
+                        src={(client?.image as Media)?.url as string}
+                        alt='Author'
+                        height={50}
+                        width={50}
+                      />
+                    ))}
                   <i className='fal fa-plus' />
-                  <span className='text'>{data?.client_description}</span>
+                  <span className='text line-clamp-2'>
+                    {data?.client_description}
+                  </span>
                 </div>
               </div>
             </div>
             <div className='col-lg-6'>
               <div className='hero-two-image mb-50 wow zoomIn delay-0-2s'>
-                <img
+                <Image
                   src={(data?.hero_image as Media)?.url as string}
                   alt='Hero'
+                  height={350}
+                  width={648}
                 />
               </div>
             </div>
             <div className='col-lg-2'>
               <div className='hero-two-btn mb-50 wow fadeInLeft delay-0-2s'>
                 <Link legacyBehavior href='/about'>
-                  <a className='explore-more'>
+                  <span className='explore-more'>
                     <i className='fas fa-arrow-right' />{' '}
                     <span>{data?.badge_title}</span>
-                  </a>
+                  </span>
                 </Link>
               </div>
             </div>

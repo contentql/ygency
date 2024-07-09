@@ -7,13 +7,13 @@ import {
   Font,
   Head,
   Heading,
-  Img,
   Preview,
   Row,
   Section,
   Tailwind,
   Text,
 } from '@react-email/components'
+import Image from 'next/image'
 
 interface ResetPasswordEmailProps {
   appName?: string
@@ -47,10 +47,10 @@ export default function Email({
         <Container className='rounded-lg border border-solid border-white/[0.03] bg-zinc-800 p-12'>
           <Row>
             <Column className='w-[80px]'>
-              <Img
+              <Image
                 src={`${baseUrl}/icon.png`}
-                width='60'
-                height='60'
+                width={60}
+                height={60}
                 alt={`${appName} logo`}
               />
             </Column>

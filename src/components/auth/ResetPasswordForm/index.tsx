@@ -1,6 +1,7 @@
 'use client'
 
 import { zodResolver } from '@hookform/resolvers/zod'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useState, useTransition } from 'react'
 import { useForm } from 'react-hook-form'
@@ -61,12 +62,11 @@ export function GenerateResetTokenForm() {
             </h1>
             <p className='mt-2 text-sm text-gray-600 dark:text-gray-400'>
               Remember your password?
-              <a
+              <Link
                 className='pl-1 font-medium text-blue-600 decoration-2 hover:underline'
-                href='/sign-in'
-              >
+                href='/sign-in'>
                 SignIn here
-              </a>
+              </Link>
             </p>
           </div>
 
@@ -77,8 +77,7 @@ export function GenerateResetTokenForm() {
                 <div>
                   <label
                     htmlFor='email'
-                    className='mb-2 ml-1 block text-sm font-bold dark:text-white'
-                  >
+                    className='mb-2 ml-1 block text-sm font-bold dark:text-white'>
                     Email address
                   </label>
                   <div className='relative'>
@@ -94,8 +93,7 @@ export function GenerateResetTokenForm() {
                   {errors.email && (
                     <p
                       className='mt-2 hidden text-xs text-red-600'
-                      id='email-error'
-                    >
+                      id='email-error'>
                       {errors.email.message}
                     </p>
                   )}
@@ -103,8 +101,7 @@ export function GenerateResetTokenForm() {
                 <button
                   type='submit'
                   disabled={isSubmitting}
-                  className='mt-3 inline-flex items-center justify-center gap-2 rounded-md border border-transparent bg-blue-500 px-4 py-3 text-sm font-semibold text-white transition-all hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:bg-opacity-50 dark:focus:ring-offset-gray-800'
-                >
+                  className='mt-3 inline-flex items-center justify-center gap-2 rounded-md border border-transparent bg-blue-500 px-4 py-3 text-sm font-semibold text-white transition-all hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:bg-opacity-50 dark:focus:ring-offset-gray-800'>
                   {isSubmitting ? 'Sending...' : 'Send Reset Link'}
                 </button>
               </div>
@@ -170,8 +167,7 @@ export function ResetPasswordForm({ token }: { token: string }) {
                 <div>
                   <label
                     htmlFor='password'
-                    className='mb-2 ml-1 block text-sm font-bold dark:text-white'
-                  >
+                    className='mb-2 ml-1 block text-sm font-bold dark:text-white'>
                     Email address
                   </label>
                   <div className='relative'>
@@ -187,8 +183,7 @@ export function ResetPasswordForm({ token }: { token: string }) {
                   {errors.password && (
                     <p
                       className='mt-2 hidden text-xs text-red-600'
-                      id='email-error'
-                    >
+                      id='email-error'>
                       {errors.password.message}
                     </p>
                   )}
@@ -196,8 +191,7 @@ export function ResetPasswordForm({ token }: { token: string }) {
                 <button
                   type='submit'
                   disabled={isSubmitting}
-                  className='mt-3 inline-flex items-center justify-center gap-2 rounded-md border border-transparent bg-blue-500 px-4 py-3 text-sm font-semibold text-white transition-all hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:bg-opacity-50 dark:focus:ring-offset-gray-800'
-                >
+                  className='mt-3 inline-flex items-center justify-center gap-2 rounded-md border border-transparent bg-blue-500 px-4 py-3 text-sm font-semibold text-white transition-all hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:bg-opacity-50 dark:focus:ring-offset-gray-800'>
                   {isSubmitting ? 'Processing...' : 'Reset Password'}
                 </button>
               </div>

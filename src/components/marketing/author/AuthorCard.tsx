@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { trpc } from '@/trpc/client'
@@ -13,7 +14,12 @@ const AuthorCard = () => {
             <div className='tag-item wow fadeInUp delay-0-2s'>
               <div className='content'>
                 <div className='image'>
-                  <img src={author?.imageUrl || ''} alt='author image' />
+                  <Image
+                    src={author?.imageUrl || ''}
+                    alt='author image'
+                    height={150}
+                    width={150}
+                  />
                 </div>
                 <div>
                   <h5>{author?.name}</h5>

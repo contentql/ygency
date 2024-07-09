@@ -1,8 +1,10 @@
 'use client'
 
 import { Media, TestimonialType } from '@payload-types'
+import Image from 'next/image'
 import {
   A11y,
+  Autoplay,
   EffectCreative,
   Navigation,
   Pagination,
@@ -20,9 +22,11 @@ const Testimonial = (data: TestimonialType) => {
           <div className='row'>
             <div className='col-lg-6'>
               <div className='image-border-shape rmb-20 wow fadeInRight delay-0-2s'>
-                <img
+                <Image
                   src={(data?.image as Media)?.url as string}
                   alt='Testimonial Left Image'
+                  height={534}
+                  width={429}
                 />
                 <div className='bottom-border' />
               </div>
@@ -36,11 +40,23 @@ const Testimonial = (data: TestimonialType) => {
                     Scrollbar,
                     A11y,
                     EffectCreative,
+                    Autoplay,
                   ]}
                   spaceBetween={50}
                   slidesPerView={1}
                   loop={true}
-                  autoplay={true}
+                  pagination={{
+                    el: '.testimonial-dots .slick-dots',
+                    clickable: true,
+                  }}
+                  navigation={{
+                    nextEl: '.testimonial-next',
+                    prevEl: '.testimonial-prev',
+                  }}
+                  autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                  }}
                   creativeEffect={{
                     prev: {
                       shadow: true,
@@ -50,7 +66,6 @@ const Testimonial = (data: TestimonialType) => {
                       translate: ['100%', 0, 0],
                     },
                   }}
-                  pagination={{ clickable: true }}
                   scrollbar={{ draggable: true }}>
                   {data?.testimonials?.map((testimonial, idx) => (
                     <SwiperSlide key={idx} className='testimonial-item'>
@@ -63,12 +78,14 @@ const Testimonial = (data: TestimonialType) => {
                       <div className='testimonial-footer'>
                         <div className='testimonial-author'>
                           <div className='author-image'>
-                            <img
+                            <Image
                               src={
                                 (testimonial?.reviewer_image as Media)
                                   ?.url as string
                               }
                               alt='Author Image'
+                              height={65}
+                              width={65}
                             />
                           </div>
                           <div className='author-info'>
@@ -83,6 +100,17 @@ const Testimonial = (data: TestimonialType) => {
                     </SwiperSlide>
                   ))}
                 </Swiper>
+                <div className='testimonial-controls mt-75 rmt-40 wow fadeInUp delay-0-2s'>
+                  <button className='testimonial-prev slick-arrow'>
+                    <i className='far fa-chevron-left' />
+                  </button>
+                  <div className='testimonial-dots'>
+                    <div className='slick-dots'></div>
+                  </div>
+                  <button className='testimonial-next slick-arrow'>
+                    <i className='far fa-chevron-right' />
+                  </button>
+                </div>
               </div>
             </div>
           </div>

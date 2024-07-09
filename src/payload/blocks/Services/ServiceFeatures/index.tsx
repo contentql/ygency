@@ -12,15 +12,15 @@ const ServiceFeatures = (data: ServiceFeaturesType) => {
                 <div className='top-part'>
                   <span className='serial-number'>{index + 1}</span>
                   <Link legacyBehavior href='/service-details'>
-                    <a className='details-btn'>
+                    <span className='details-btn'>
                       <i className='far fa-arrow-right' />
-                    </a>
+                    </span>
                   </Link>
                 </div>
                 <div className='content'>
                   <h4>
                     <Link legacyBehavior href='/service-details'>
-                      <a>{feature?.title}</a>
+                      {feature?.title}
                     </Link>
                   </h4>
                   <p>{feature?.description}</p>

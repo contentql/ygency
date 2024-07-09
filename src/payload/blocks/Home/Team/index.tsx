@@ -1,4 +1,5 @@
 import { Media, TeamType } from '@payload-types'
+import Image from 'next/image'
 import Link from 'next/link'
 
 const Team = (data: TeamType) => {
@@ -21,32 +22,34 @@ const Team = (data: TeamType) => {
               <div className='team-member wow fadeInUp delay-0-3s'>
                 <div className='image'>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src={(member?.image as Media)?.url as string}
                     alt={member?.name as string}
+                    height={288}
+                    width={252}
                   />
                 </div>
                 <div className='content'>
                   <h4>{member?.name}</h4>
                   <span>{member?.role}</span>
                   <Link legacyBehavior href='/team-details'>
-                    <a className='read-more'>
+                    <span className='read-more'>
                       <i className='far fa-arrow-right' />
-                    </a>
+                    </span>
                   </Link>
                 </div>
                 <div className='btn-social'>
                   <Link legacyBehavior href='/team-details'>
-                    <a className='read-more'>
+                    <span className='read-more'>
                       <span>View Details</span>{' '}
                       <i className='far fa-arrow-right' />
-                    </a>
+                    </span>
                   </Link>
                   <div className='social-style-two'>
                     {member?.social_media?.map((social, idx) => (
-                      <a key={idx} href={social?.url}>
+                      <Link key={idx} href={social?.url}>
                         <i className={social?.icon as string} />
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>

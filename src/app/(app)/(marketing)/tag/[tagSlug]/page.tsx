@@ -1,4 +1,5 @@
 import { Blog, Media } from '@payload-types'
+import Image from 'next/image'
 
 import Blogs from '@/components/marketing/blog/Blogs'
 import { serverClient } from '@/trpc/serverClient'
@@ -27,13 +28,15 @@ const page = async ({ params }: PageProps) => {
               <div className='col-lg-7'>
                 <div className='section-title wow fadeInUp delay-0-2s mb-60 text-center'>
                   <div className='tag-image'>
-                    <img
+                    <Image
                       src={
                         (blogs?.tagData?.at(0)?.tagImage as Media)?.url || ''
                       }
                       alt={
                         (blogs?.tagData?.at(0)?.tagImage as Media)?.alt || ''
                       }
+                      height={150}
+                      width={150}
                     />
                   </div>
                   <h2 className=' mb-15'>{blogs?.tagData?.at(0)?.title}</h2>

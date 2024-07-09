@@ -1,4 +1,5 @@
 import { Media, ServiceType } from '@payload-types'
+import Image from 'next/image'
 import Link from 'next/link'
 
 const Service = (data: ServiceType) => {
@@ -23,21 +24,23 @@ const Service = (data: ServiceType) => {
                   <div className='icon-btn'>
                     <i className={`${service?.service_icon}`} />
                     <Link legacyBehavior href='/service-details'>
-                      <a className='more-btn'>
+                      <span className='more-btn'>
                         <i className='far fa-arrow-right' />
-                      </a>
+                      </span>
                     </Link>
                   </div>
                   <h5>
                     <Link legacyBehavior href='/service-details'>
-                      <a>{service?.title}</a>
+                      {service?.title}
                     </Link>
                   </h5>
                 </div>
                 <div className='image'>
-                  <img
+                  <Image
                     src={(service?.image as Media)?.url as string}
                     alt='Service'
+                    height={120}
+                    width={289}
                   />
                 </div>
               </div>
