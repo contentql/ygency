@@ -1,13 +1,13 @@
 'use client'
 
 import { zodResolver } from '@hookform/resolvers/zod'
+import Image from 'next/image'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState, useTransition } from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 
-import Image from 'next/image'
-import Link from 'next/link'
 import { signUp } from './actions'
 
 export const signUpFormSchema = z.object({
@@ -242,7 +242,7 @@ const SignUpForm = () => {
               Already have an account?{' '}
               <Link href='/sign-in' className='text-white hover:underline'>
                 SignIn here
-              </Lin>
+              </Link>
             </p>
           </div>
         </div>
