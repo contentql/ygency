@@ -74,10 +74,10 @@ const Hero = (data: HeroType) => {
             <div className='col-lg-2'>
               <div className='hero-two-btn mb-50 wow fadeInLeft delay-0-2s'>
                 <Link legacyBehavior href='/about'>
-                  <a className='explore-more'>
+                  <span className='explore-more'>
                     <i className='fas fa-arrow-right' />{' '}
                     <span>{data?.badge_title}</span>
-                  </a>
+                  </span>
                 </Link>
               </div>
             </div>

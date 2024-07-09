@@ -28,10 +28,10 @@ const DaskTopMenu = () => {
   return (
     <ul className='navigation d-none d-lg-flex desktop-menu'>
       <li className='dropdown'>
-        <a href='#'>Home</a>
+        <Link href='#'>Home</Link>
         <ul>
           <li className='dropdown'>
-            <a href='#'>MultiPage</a>
+            <Link href='#'>MultiPage</Link>
             <ul>
               <li>
                 <Link legacyBehavior href='/'>
@@ -69,7 +69,7 @@ const DaskTopMenu = () => {
             </div>
           </li>
           <li className='dropdown'>
-            <a href='#'>OnePage</a>
+            <Link href='#'>OnePage</Link>
             <ul>
               <li>
                 <Link legacyBehavior href='index1-onepage'>
@@ -117,7 +117,7 @@ const DaskTopMenu = () => {
         </Link>
       </li>
       <li className='dropdown'>
-        <a href='#'>pages</a>
+        <Link href='#'>pages</Link>
         <ul>
           <li>
             <Link legacyBehavior href='faqs'>
@@ -125,7 +125,7 @@ const DaskTopMenu = () => {
             </Link>
           </li>
           <li className='dropdown'>
-            <a href='#'>Products</a>
+            <Link href='#'>Products</Link>
             <ul>
               <li>
                 <Link legacyBehavior href='shop'>
@@ -143,7 +143,7 @@ const DaskTopMenu = () => {
             </div>
           </li>
           <li className='dropdown'>
-            <a href='#'>Team</a>
+            <Link href='#'>Team</Link>
             <ul>
               <li>
                 <Link legacyBehavior href='team'>
@@ -181,7 +181,7 @@ const DaskTopMenu = () => {
         </div>
       </li>
       <li className='dropdown'>
-        <a href='#'>Services</a>
+        <Link href='#'>Services</Link>
         <ul>
           <li>
             <Link legacyBehavior href='services'>
@@ -204,7 +204,7 @@ const DaskTopMenu = () => {
         </div>
       </li>
       <li className='dropdown'>
-        <a href='#'>Projects</a>
+        <Link href='#'>Projects</Link>
         <ul>
           <li>
             <Link legacyBehavior href='projects'>
@@ -227,7 +227,7 @@ const DaskTopMenu = () => {
         </div>
       </li>
       <li className='dropdown'>
-        <a href='#'>blog</a>
+        <Link href='#'>blog</Link>
         <ul>
           <li>
             <Link legacyBehavior href='blog'>
@@ -267,10 +267,10 @@ const MobileMenu = () => {
   return (
     <ul className='navigation d-block d-lg-none mobile-menu'>
       <li className='dropdown'>
-        <a href='#'>Home</a>
+        <Link href='#'>Home</Link>
         <ul style={activeLi('home')}>
           <li className='dropdown'>
-            <a href='#'>MultiPage</a>
+            <Link href='#'>MultiPage</Link>
             <ul style={multiMenuActiveLi('multiPage')}>
               <li>
                 <Link legacyBehavior href='/'>
@@ -310,7 +310,7 @@ const MobileMenu = () => {
             </div>
           </li>
           <li className='dropdown'>
-            <a href='#'>OnePage</a>
+            <Link href='#'>OnePage</Link>
             <ul style={multiMenuActiveLi('OnePage')}>
               <li>
                 <Link legacyBehavior href='index1-onepage'>
@@ -360,7 +360,7 @@ const MobileMenu = () => {
         </Link>
       </li>
       <li className='dropdown'>
-        <a href='#'>pages</a>
+        <Link href='#'>pages</Link>
         <ul style={activeLi('pages')}>
           <li>
             <Link legacyBehavior href='faqs'>
@@ -368,7 +368,7 @@ const MobileMenu = () => {
             </Link>
           </li>
           <li className='dropdown'>
-            <a href='#'>Products</a>
+            <Link href='#'>Products</Link>
             <ul style={multiMenuActiveLi('Products')}>
               <li>
                 <Link legacyBehavior href='shop'>
@@ -388,7 +388,7 @@ const MobileMenu = () => {
             </div>
           </li>
           <li className='dropdown'>
-            <a href='#'>Team</a>
+            <Link href='#'>Team</Link>
             <ul style={multiMenuActiveLi('Team')}>
               <li>
                 <Link legacyBehavior href='team'>
@@ -426,7 +426,7 @@ const MobileMenu = () => {
         </div>
       </li>
       <li className='dropdown'>
-        <a href='#'>Services</a>
+        <Link href='#'>Services</Link>
         <ul style={activeLi('Services')}>
           <li>
             <Link legacyBehavior href='services'>
@@ -449,7 +449,7 @@ const MobileMenu = () => {
         </div>
       </li>
       <li className='dropdown'>
-        <a href='#'>Projects</a>
+        <Link href='#'>Projects</Link>
         <ul style={activeLi('Projects')}>
           <li>
             <Link legacyBehavior href='projects'>
@@ -472,7 +472,7 @@ const MobileMenu = () => {
         </div>
       </li>
       <li className='dropdown'>
-        <a href='#'>blog</a>
+        <Link href='#'>blog</Link>
         <ul style={activeLi('blog')}>
           <li>
             <Link legacyBehavior href='blog'>
@@ -507,9 +507,9 @@ const SingleMenu = ({
     <ul className='navigation onepage clearfix'>
       {headerLinks?.map((link, index) => (
         <li key={index}>
-          <a href={(link?.page?.value as Page)?.path || ''}>
+          <Link href={(link?.page?.value as Page)?.path || ''}>
             {(link?.page?.value as Page)?.title}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>

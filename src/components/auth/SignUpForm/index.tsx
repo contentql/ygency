@@ -6,6 +6,8 @@ import { useEffect, useState, useTransition } from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 
+import Image from 'next/image'
+import Link from 'next/link'
 import { signUp } from './actions'
 
 export const signUpFormSchema = z.object({
@@ -75,11 +77,12 @@ const SignUpForm = () => {
     <div className='flex min-h-screen'>
       <div className='hidden flex-1 items-center justify-center bg-transparent text-black lg:flex'>
         {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
-        <img
+        <Image
           src='/images/signup-page-illustration.svg'
           width={50}
           height={50}
           className='md:h-96 md:w-96'
+          alt='image'
         />
       </div>
       <div className='flex w-full items-center justify-center bg-[#26304e] lg:w-1/2'>
@@ -237,9 +240,9 @@ const SignUpForm = () => {
           <div className='mt-4 text-center text-sm text-gray-300'>
             <p>
               Already have an account?{' '}
-              <a href='/sign-in' className='text-white hover:underline'>
+              <Link href='/sign-in' className='text-white hover:underline'>
                 SignIn here
-              </a>
+              </Lin>
             </p>
           </div>
         </div>

@@ -1,6 +1,7 @@
 'use client'
 
 import { Media, SiteSetting } from '@payload-types'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect } from 'react'
 
@@ -32,16 +33,13 @@ const DefaultHeader = ({
             <div className='logo-outer'>
               <div className='logo'>
                 <Link legacyBehavior href='/'>
-                  <a>
-                    <img
-                      src={
-                        (dark && (headerData?.logo_image as Media)?.url) || ''
-                      }
-                      alt={(headerData?.logo_image as Media)?.alt || 'Logo'}
-                      title='Logo'
-                      style={{ width: '150px', height: '40px' }}
-                    />
-                  </a>
+                  <Image
+                    src={(dark && (headerData?.logo_image as Media)?.url) || ''}
+                    alt={(headerData?.logo_image as Media)?.alt || 'Logo'}
+                    title='Logo'
+                    height={40}
+                    width={150}
+                  />
                 </Link>
               </div>
             </div>

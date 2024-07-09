@@ -33,23 +33,23 @@ const Team = (data: TeamType) => {
                   <h4>{member?.name}</h4>
                   <span>{member?.role}</span>
                   <Link legacyBehavior href='/team-details'>
-                    <a className='read-more'>
+                    <span className='read-more'>
                       <i className='far fa-arrow-right' />
-                    </a>
+                    </span>
                   </Link>
                 </div>
                 <div className='btn-social'>
                   <Link legacyBehavior href='/team-details'>
-                    <a className='read-more'>
+                    <span className='read-more'>
                       <span>View Details</span>{' '}
                       <i className='far fa-arrow-right' />
-                    </a>
+                    </span>
                   </Link>
                   <div className='social-style-two'>
                     {member?.social_media?.map((social, idx) => (
-                      <a key={idx} href={social?.url}>
+                      <Link key={idx} href={social?.url}>
                         <i className={social?.icon as string} />
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>

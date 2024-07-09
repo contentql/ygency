@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { redirect } from 'next/navigation'
 
 import ProfileForm from '@/components/auth/ProfileForm'
@@ -14,11 +15,11 @@ const ProfilePage = async () => {
         <div className='sticky top-12 flex flex-col gap-2 border-r border-indigo-100 p-4 text-sm'>
           <h2 className='mb-4 pl-3 text-2xl font-semibold'>Settings</h2>
 
-          <a
+          <Link
             href='/profile'
             className='flex items-center rounded-full border px-3 py-2.5 font-semibold'>
             Account Settings
-          </a>
+          </Link>
         </div>
       </aside>
       <main className='min-h-screen w-full py-1'>

@@ -383,37 +383,37 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                   <ul>
                     <li>
                       <Link legacyBehavior href='/blog'>
-                        <a>Web Design</a>
+                        Web Design
                       </Link>{' '}
                       <span>(5)</span>
                     </li>
                     <li>
                       <Link legacyBehavior href='/blog'>
-                        <a>SEO Optimizations</a>
+                        SEO Optimizations
                       </Link>{' '}
                       <span>(3)</span>
                     </li>
                     <li>
                       <Link legacyBehavior href='/blog'>
-                        <a>Mobile Apps Design</a>
+                        Mobile Apps Design
                       </Link>{' '}
                       <span>(2)</span>
                     </li>
                     <li>
                       <Link legacyBehavior href='/blog'>
-                        <a>Development</a>
+                        Development
                       </Link>{' '}
                       <span>(4)</span>
                     </li>
                     <li>
                       <Link legacyBehavior href='/blog'>
-                        <a>Graphics Design</a>
+                        Graphics Design
                       </Link>{' '}
                       <span>(6)</span>
                     </li>
                     <li>
                       <Link legacyBehavior href='/blog'>
-                        <a>3D Illustrations</a>
+                        3D Illustrations
                       </Link>{' '}
                       <span>(2)</span>
                     </li>
@@ -434,9 +434,7 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                       <div className='content'>
                         <h5>
                           <Link legacyBehavior href='/blog-details'>
-                            <a>
-                              UX Optimizations Keyboard Assistive Technology
-                            </a>
+                            UX Optimizations Keyboard Assistive Technology
                           </Link>
                         </h5>
                         <span className='date'>
@@ -457,10 +455,7 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                       <div className='content'>
                         <h5>
                           <Link legacyBehavior href='/blog-details'>
-                            <a>
-                              Inclusive Design Accessibility Live Stream
-                              Pickering
-                            </a>
+                            Inclusive Design Accessibility Live Stream Pickering
                           </Link>
                         </h5>
                         <span className='date'>
@@ -481,9 +476,7 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                       <div className='content'>
                         <h5>
                           <Link legacyBehavior href='/blog-details'>
-                            <a>
-                              Online Environments The We Work Well For Users
-                            </a>
+                            Online Environments The We Work Well For Users
                           </Link>
                         </h5>
                         <span className='date'>
@@ -498,28 +491,28 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                   <h4 className='widget-title'>Popular Tags</h4>
                   <div className='tag-coulds'>
                     <Link legacyBehavior href='/blog'>
-                      <a>Design</a>
+                      Design
                     </Link>
                     <Link legacyBehavior href='/blog'>
-                      <a>SEO</a>
+                      SEO
                     </Link>
                     <Link legacyBehavior href='/blog'>
-                      <a>Development</a>
+                      Development
                     </Link>
                     <Link legacyBehavior href='/blog'>
-                      <a>Graphics</a>
+                      Graphics
                     </Link>
                     <Link legacyBehavior href='/blog'>
-                      <a>3D Illustation</a>
+                      3D Illustation
                     </Link>
                     <Link legacyBehavior href='/blog'>
-                      <a>Art</a>
+                      Art
                     </Link>
                     <Link legacyBehavior href='/blog'>
-                      <a>Product Design</a>
+                      Product Design
                     </Link>
                     <Link legacyBehavior href='/blog'>
-                      <a>Mobile App</a>
+                      Mobile App
                     </Link>
                   </div>
                 </div>
@@ -527,7 +520,7 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                   <h4 className='widget-title'>Gallery</h4>
                   <div className='gallery'>
                     <Link legacyBehavior href='/blog'>
-                      <a>
+                      <span>
                         <Image
                           src='/assets/images/widget/gallery1.jpg'
                           alt='Gallery'
@@ -535,10 +528,10 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                           width={100}
                         />
                         <i className='far fa-arrow-right' />
-                      </a>
+                      </span>
                     </Link>
                     <Link legacyBehavior href='/blog'>
-                      <a>
+                      <span>
                         <Image
                           src='/assets/images/widget/gallery2.jpg'
                           alt='Gallery'
@@ -546,10 +539,10 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                           width={100}
                         />
                         <i className='far fa-arrow-right' />
-                      </a>
+                      </span>
                     </Link>
                     <Link legacyBehavior href='/blog'>
-                      <a>
+                      <span>
                         <Image
                           src='/assets/images/widget/gallery3.jpg'
                           alt='Gallery'
@@ -557,10 +550,10 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                           width={100}
                         />
                         <i className='far fa-arrow-right' />
-                      </a>
+                      </span>
                     </Link>
                     <Link legacyBehavior href='/blog'>
-                      <a>
+                      <span>
                         <Image
                           src='/assets/images/widget/gallery4.jpg'
                           alt='Gallery'
@@ -568,10 +561,10 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                           width={100}
                         />
                         <i className='far fa-arrow-right' />
-                      </a>
+                      </span>
                     </Link>
                     <Link legacyBehavior href='/blog'>
-                      <a>
+                      <span>
                         <Image
                           src='/assets/images/widget/gallery5.jpg'
                           alt='Gallery'
@@ -579,10 +572,10 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                           width={100}
                         />
                         <i className='far fa-arrow-right' />
-                      </a>
+                      </span>
                     </Link>
                     <Link legacyBehavior href='/blog'>
-                      <a>
+                      <span>
                         <Image
                           src='/assets/images/widget/gallery6.jpg'
                           alt='Gallery'
@@ -590,7 +583,7 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                           width={100}
                         />
                         <i className='far fa-arrow-right' />
-                      </a>
+                      </span>
                     </Link>
                   </div>
                 </div>

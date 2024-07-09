@@ -17,10 +17,10 @@ const DefaultFooter = ({ dark }: { dark: any }) => {
           <div className='col-lg-5 col-sm-7 col-6 col-small wow fadeInRight delay-0-2s'>
             <div className='footer-right-btn mb-35 text-lg-end'>
               <Link legacyBehavior href='/contact'>
-                <a className='explore-more text-start'>
+                <span className='explore-more text-start'>
                   <i className='fas fa-arrow-right' />{' '}
                   <span>Send Us Message</span>
-                </a>
+                </span>
               </Link>
             </div>
           </div>
@@ -29,9 +29,9 @@ const DefaultFooter = ({ dark }: { dark: any }) => {
               <h5 className='footer-title'>Get In Touch</h5>
               <div className='text'>
                 <p>55 Main Street, 2nd block Malborne, Australia</p>
-                <a href='mailto:support@gmail.com'>support@gmail.com</a>
+                <Link href='mailto:support@gmail.com'>support@gmail.com</Link>
                 <br />
-                <a href='callto:+000(123)45688'>+000 (123) 456 88</a>
+                <Link href='callto:+000(123)45688'>+000 (123) 456 88</Link>
               </div>
             </div>
           </div>
@@ -42,12 +42,12 @@ const DefaultFooter = ({ dark }: { dark: any }) => {
                 <ul className='list-style-two'>
                   <li>
                     <Link legacyBehavior href='/'>
-                      <a>Home</a>
+                      Home
                     </Link>
                   </li>
                   <li>
                     <Link legacyBehavior href='/about'>
-                      <a>About</a>
+                      About
                     </Link>
                   </li>
                   <li>
@@ -57,12 +57,12 @@ const DefaultFooter = ({ dark }: { dark: any }) => {
                   </li>
                   <li>
                     <Link legacyBehavior href='/contact'>
-                      <a>Career ?</a>
+                      Career ?
                     </Link>
                   </li>
                   <li>
                     <Link legacyBehavior href='/faqs'>
-                      <a>FAQs</a>
+                      FAQs
                     </Link>
                   </li>
                 </ul>
@@ -74,7 +74,7 @@ const DefaultFooter = ({ dark }: { dark: any }) => {
                   </li>
                   <li>
                     <Link legacyBehavior href='/about'>
-                      <a>Privacy Policy</a>
+                      Privacy Policy
                     </Link>
                   </li>
                   <li>
@@ -97,7 +97,7 @@ const DefaultFooter = ({ dark }: { dark: any }) => {
               <p>
                 Copyright @2023,{' '}
                 <Link legacyBehavior href='/'>
-                  <a>Ygency</a>
+                  Ygency
                 </Link>{' '}
                 All Rights Reserved
               </p>

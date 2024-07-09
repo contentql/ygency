@@ -618,6 +618,7 @@ a.theme-btn.style-three {
   -ms-flex-direction: column;
   flex-direction: column;
   background: var(--ygency-primary-color);
+  cursor: pointer;
 }
 .explore-more i {
   text-align: center;
@@ -4219,6 +4220,7 @@ h6,
   -webkit-box-flex: 0;
   -ms-flex: none;
   flex: none;
+  cursor: pointer;
 }
 @media only screen and (max-width: 991px) {
   .main-header .logo-outer {
@@ -4265,6 +4267,7 @@ h6,
 
 .main-menu .mobile-logo {
   margin-right: auto;
+  cursor: pointer;
 }
 @media only screen and (max-width: 575px) {
   .main-menu .mobile-logo {
@@ -12420,14 +12423,15 @@ blockquote .blockquote-footer:before {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: -20px -10px 0;
+  cursor: pointer;
 }
-.gallery a {
+.gallery span {
   margin: 20px 10px 0;
   z-index: 1;
   position: relative;
   max-width: calc(33.333% - 20px);
 }
-.gallery a::before {
+.gallery span::before {
   position: absolute;
   content: '';
   width: 100%;
@@ -12438,13 +12442,13 @@ blockquote .blockquote-footer:before {
   opacity: 0;
   background-color: #000000;
 }
-.gallery a:before {
+.gallery span:before {
   z-index: 1;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-.gallery a i {
+.gallery span i {
   z-index: 2;
   position: absolute;
   left: 50%;
@@ -12458,10 +12462,10 @@ blockquote .blockquote-footer:before {
   -ms-transform: translate(-50%, -50%) rotate(-45deg);
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-.gallery a:hover:before {
+.gallery span:hover:before {
   opacity: 0.75;
 }
-.gallery a:hover i {
+.gallery span:hover i {
   opacity: 1;
 }
 
