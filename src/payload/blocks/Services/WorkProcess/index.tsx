@@ -1,4 +1,5 @@
 import { WorkProcessType } from '@payload-types'
+import Image from 'next/image'
 
 const WorkProcess = (data: WorkProcessType) => {
   return (
@@ -31,9 +32,11 @@ const WorkProcess = (data: WorkProcessType) => {
         </div>
         <div className='bg-line-shape'>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src='assets/images/shapes/work-process-line.png'
             alt='Work Process Line'
+            height={199}
+            width={1320}
           />
         </div>
       </div>

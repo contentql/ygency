@@ -1,4 +1,5 @@
 import { ServiceBannerType } from '@payload-types'
+import Image from 'next/image'
 
 const ServiceBanner = (data: ServiceBannerType) => {
   return (
@@ -10,10 +11,12 @@ const ServiceBanner = (data: ServiceBannerType) => {
           <div className='col-lg-12'>
             <h1 className='hero-title mb-100 rmb-50 wow fadeInUp delay-0-2s'>
               {data?.title?.split(' ')?.slice(0, 3)?.join(' ')}
-              <img
+              <Image
                 className='mxw-10 leaf'
-                src='assets/images/banner/leaf.png'
+                src='/assets/images/banner/leaf.png'
                 alt='Leaf'
+                height={138}
+                width={109}
               />
               {data?.title?.split(' ')?.slice(3)?.join(' ')}
             </h1>
