@@ -1,4 +1,5 @@
 import { User } from '@payload-types'
+import Image from 'next/image'
 
 const AuthorDetails = ({ author }: { author: User }) => {
   console.log('author........', author)
@@ -15,7 +16,12 @@ const AuthorDetails = ({ author }: { author: User }) => {
             <div className='section-title wow fadeInUp delay-0-2s mb-60 text-center'>
               <div className='tag-image'>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={author?.imageUrl || ''} alt='Author' />
+                <Image
+                  src={author?.imageUrl || ''}
+                  alt='Author'
+                  height={150}
+                  width={150}
+                />
               </div>
               <h2 className=' mb-15'>{author?.name}</h2>
             </div>

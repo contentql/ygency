@@ -1,4 +1,5 @@
 import { Media } from '@payload-types'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { trpc } from '@/trpc/client'
@@ -13,9 +14,11 @@ const TagCard = () => {
             <div className='tag-item wow fadeInUp delay-0-2s'>
               <div className='content'>
                 <div className='image'>
-                  <img
+                  <Image
                     src={(tag?.tagImage as Media)?.url || ''}
                     alt={(tag?.tagImage as Media)?.alt || ''}
+                    height={150}
+                    width={150}
                   />
                 </div>
                 <div>

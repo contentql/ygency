@@ -7,7 +7,6 @@ import { useEffect } from 'react'
 import { sidebarClick, sidebarSignUpClick, stickyNav } from '@/utils/nav'
 
 import Nav from './Nav'
-import NavSearch from './NavSearch'
 
 const DefaultHeader = ({
   singleMenu,
@@ -52,7 +51,7 @@ const DefaultHeader = ({
               {/* Main Menu End*/}
             </div>
             {/* Nav Search */}
-            <NavSearch />
+            {/* <NavSearch /> */}
             {/* Menu Button */}
             <div className='menu-btns'>
               <div className='menu-sidebar'>

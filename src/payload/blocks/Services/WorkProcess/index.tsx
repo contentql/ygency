@@ -33,7 +33,7 @@ const WorkProcess = (data: WorkProcessType) => {
         <div className='bg-line-shape'>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <Image
-            src='assets/images/shapes/work-process-line.png'
+            src='/assets/images/shapes/work-process-line.png'
             alt='Work Process Line'
             height={199}
             width={1320}

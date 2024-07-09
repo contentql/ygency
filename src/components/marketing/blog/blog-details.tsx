@@ -1,5 +1,6 @@
 import { Blog, User } from '@payload-types'
 import { format, parseISO } from 'date-fns'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import RichText from './RichText'
@@ -25,18 +26,20 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                   <li>
                     <i className='fal fa-user-alt' />
                     {blogData?.author?.slice(0, 3).map((author, index) => (
-                      <a key={index} href='#'>
+                      <Link
+                        key={index}
+                        href={`/author/${(author?.value as User)?.name}`}>
                         {(author?.value as User)?.name}
-                      </a>
+                      </Link>
                     ))}
                   </li>
                   <li>
                     <i className='far fa-calendar-alt' />
-                    <a href='#'>{formatDate(blogData?.createdAt)}</a>
+                    <Link href='#'>{formatDate(blogData?.createdAt)}</Link>
                   </li>
                   <li>
                     <i className='far fa-comments' />
-                    <a href='#'>Comment (5)</a>
+                    <Link href='#'>Comment (5)</Link>
                   </li>
                 </ul>
                 <h2 className='page-title wow fadeInUp delay-0-3s'>
@@ -62,30 +65,30 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                 <div className='item'>
                   <div className='tag-coulds'>
                     <Link legacyBehavior href='/blog'>
-                      <a>Design</a>
+                      Design
                     </Link>
                     <Link legacyBehavior href='/blog'>
-                      <a>SEO</a>
+                      SEO
                     </Link>
                     <Link legacyBehavior href='/blog'>
-                      <a>Development</a>
+                      Development
                     </Link>
                   </div>
                 </div>
                 <div className='item'>
                   <div className='social-style-two'>
-                    <a href='#'>
+                    <Link href='#'>
                       <i className='fab fa-facebook-f' />
-                    </a>
-                    <a href='#'>
+                    </Link>
+                    <Link href='#'>
                       <i className='fab fa-twitter' />
-                    </a>
-                    <a href='#'>
+                    </Link>
+                    <Link href='#'>
                       <i className='fab fa-linkedin-in' />
-                    </a>
-                    <a href='#'>
+                    </Link>
+                    <Link href='#'>
                       <i className='fab fa-instagram' />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -93,9 +96,11 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                 <div className='comment-body'>
                   <div className='author-thumb'>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src='/assets/images/blog/admin-author.jpg'
                       alt='Author'
+                      height={160}
+                      width={160}
                     />
                   </div>
                   <div className='content'>
@@ -107,24 +112,24 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                     </p>
                     <div className='social-style-one'>
                       <Link legacyBehavior href='/contact'>
-                        <a>
+                        <span>
                           <i className='fab fa-facebook-f' />
-                        </a>
+                        </span>
                       </Link>
                       <Link legacyBehavior href='/contact'>
-                        <a>
+                        <span>
                           <i className='fab fa-twitter' />
-                        </a>
+                        </span>
                       </Link>
                       <Link legacyBehavior href='/contact'>
-                        <a>
+                        <span>
                           <i className='fab fa-linkedin-in' />
-                        </a>
+                        </span>
                       </Link>
                       <Link legacyBehavior href='/contact'>
-                        <a>
+                        <span>
                           <i className='fab fa-instagram' />
-                        </a>
+                        </span>
                       </Link>
                     </div>
                   </div>
@@ -133,35 +138,45 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
               <div className='next-prev-blog pb-65'>
                 <div className='item wow fadeInLeft delay-0-2s'>
                   <div className='image'>
-                    <img src='/assets/images/blog/blog-prev.jpg' alt='Prev' />
+                    <Image
+                      src='/assets/images/blog/blog-prev.jpg'
+                      alt='Prev'
+                      height={100}
+                      width={100}
+                    />
                   </div>
                   <div className='content'>
                     <h6>
                       <Link legacyBehavior href='/blog-details'>
-                        <a>Tips For Conducting Usability Studies</a>
+                        Tips For Conducting Usability Studies
                       </Link>
                     </h6>
                     <Link legacyBehavior href='/blog-details'>
-                      <a className='read-more'>
+                      <span className='read-more'>
                         Previous <i className='far fa-arrow-right' />
-                      </a>
+                      </span>
                     </Link>
                   </div>
                 </div>
                 <div className='item wow fadeInRight delay-0-2s'>
                   <div className='image'>
-                    <img src='/assets/images/blog/blog-next.jpg' alt='Next' />
+                    <Image
+                      src='/assets/images/blog/blog-next.jpg'
+                      alt='Next'
+                      height={100}
+                      width={100}
+                    />
                   </div>
                   <div className='content'>
                     <h6>
                       <Link legacyBehavior href='/blog-details'>
-                        <a>Building Accessible Menu Systems</a>
+                        Building Accessible Menu Systems
                       </Link>
                     </h6>
                     <Link legacyBehavior href='/blog-details'>
-                      <a className='read-more'>
+                      <span className='read-more'>
                         Next <i className='far fa-arrow-right' />
-                      </a>
+                      </span>
                     </Link>
                   </div>
                 </div>
@@ -170,9 +185,11 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
               <div className='comments'>
                 <div className='comment-body wow fadeInUp delay-0-2s'>
                   <div className='author-thumb'>
-                    <img
+                    <Image
                       src='/assets/images/blog/comment-author1.jpg'
                       alt='Author'
+                      height={100}
+                      width={100}
                     />
                   </div>
                   <div className='content'>
@@ -181,7 +198,7 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                         <h6>William L. Jackson</h6>
                       </li>
                       <li>
-                        <a href='#'>February 25, 2023</a>
+                        <Link href='#'>February 25, 2023</Link>
                       </li>
                     </ul>
                     <p>
@@ -189,16 +206,18 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                       velit esse quam nihile molestiae consequatur, vel illum
                       qui dolorem eum fugiat voluptas
                     </p>
-                    <a className='read-more' href='#'>
+                    <Link className='read-more' href='#'>
                       Reply <i className='far fa-arrow-right' />
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className='comment-body comment-child wow fadeInUp delay-0-2s'>
                   <div className='author-thumb'>
-                    <img
+                    <Image
                       src='/assets/images/blog/comment-author2.jpg'
                       alt='Author'
+                      height={100}
+                      width={100}
                     />
                   </div>
                   <div className='content'>
@@ -207,7 +226,7 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                         <h6>James M. Stovall</h6>
                       </li>
                       <li>
-                        <a href='#'>February 25, 2023</a>
+                        <Link href='#'>February 25, 2023</Link>
                       </li>
                     </ul>
                     <p>
@@ -215,16 +234,18 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                       blanditiis sapiente praesentium voluptatum deleniti atque
                       corrupti quos dolores
                     </p>
-                    <a className='read-more' href='#'>
+                    <Link className='read-more' href='#'>
                       Reply <i className='far fa-arrow-right' />
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className='comment-body wow fadeInUp delay-0-2s'>
                   <div className='author-thumb'>
-                    <img
+                    <Image
                       src='/assets/images/blog/comment-author3.jpg'
                       alt='Author'
+                      height={100}
+                      width={100}
                     />
                   </div>
                   <div className='content'>
@@ -233,7 +254,7 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                         <h6>Lee M. Moreno</h6>
                       </li>
                       <li>
-                        <a href='#'>February 25, 2023</a>
+                        <Link href='#'>February 25, 2023</Link>
                       </li>
                     </ul>
                     <p>
@@ -241,9 +262,9 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                       ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
                       commodi consequatur
                     </p>
-                    <a className='read-more' href='#'>
+                    <Link className='read-more' href='#'>
                       Reply <i className='far fa-arrow-right' />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -331,25 +352,30 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                   </form>
                 </div>
                 <div className='widget widget-author wow fadeInUp delay-0-4s'>
-                  <img src='/assets/images/widget/author.png' alt='Author' />
+                  <Image
+                    src='/assets/images/widget/author.png'
+                    alt='Author'
+                    height={250}
+                    width={250}
+                  />
                   <h5>Nathan S. Nguyen</h5>
                   <p>
                     We denounce with righteous indignation dislike beguiled and
                     demoralized
                   </p>
                   <div className='social-style-one'>
-                    <a href='#'>
+                    <Link href='#'>
                       <i className='fab fa-twitter' />
-                    </a>
-                    <a href='#'>
+                    </Link>
+                    <Link href='#'>
                       <i className='fab fa-facebook-f' />
-                    </a>
-                    <a href='#'>
+                    </Link>
+                    <Link href='#'>
                       <i className='fab fa-instagram' />
-                    </a>
-                    <a href='#'>
+                    </Link>
+                    <Link href='#'>
                       <i className='fab fa-pinterest-p' />
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className='widget widget-category wow fadeInUp delay-0-2s'>
@@ -398,7 +424,12 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                   <ul>
                     <li>
                       <div className='image'>
-                        <img src='/assets/images/widget/news1.jpg' alt='News' />
+                        <Image
+                          src='/assets/images/widget/news1.jpg'
+                          alt='News'
+                          height={100}
+                          width={100}
+                        />
                       </div>
                       <div className='content'>
                         <h5>
@@ -410,13 +441,18 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                         </h5>
                         <span className='date'>
                           <i className='far fa-calendar-alt' />
-                          <a href='#'>February 18, 2023</a>
+                          <Link href='#'>February 18, 2023</Link>
                         </span>
                       </div>
                     </li>
                     <li>
                       <div className='image'>
-                        <img src='/assets/images/widget/news2.jpg' alt='News' />
+                        <Image
+                          src='/assets/images/widget/news2.jpg'
+                          alt='News'
+                          height={100}
+                          width={100}
+                        />
                       </div>
                       <div className='content'>
                         <h5>
@@ -429,13 +465,18 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                         </h5>
                         <span className='date'>
                           <i className='far fa-calendar-alt' />
-                          <a href='#'>February 18, 2023</a>
+                          <Link href='#'>February 18, 2023</Link>
                         </span>
                       </div>
                     </li>
                     <li>
                       <div className='image'>
-                        <img src='/assets/images/widget/news3.jpg' alt='News' />
+                        <Image
+                          src='/assets/images/widget/news3.jpg'
+                          alt='News'
+                          height={100}
+                          width={100}
+                        />
                       </div>
                       <div className='content'>
                         <h5>
@@ -447,7 +488,7 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                         </h5>
                         <span className='date'>
                           <i className='far fa-calendar-alt' />
-                          <a href='#'>February 18, 2023</a>
+                          <Link href='#'>February 18, 2023</Link>
                         </span>
                       </div>
                     </li>
@@ -487,54 +528,66 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                   <div className='gallery'>
                     <Link legacyBehavior href='/blog'>
                       <a>
-                        <img
+                        <Image
                           src='/assets/images/widget/gallery1.jpg'
                           alt='Gallery'
+                          height={100}
+                          width={100}
                         />
                         <i className='far fa-arrow-right' />
                       </a>
                     </Link>
                     <Link legacyBehavior href='/blog'>
                       <a>
-                        <img
+                        <Image
                           src='/assets/images/widget/gallery2.jpg'
                           alt='Gallery'
+                          height={100}
+                          width={100}
                         />
                         <i className='far fa-arrow-right' />
                       </a>
                     </Link>
                     <Link legacyBehavior href='/blog'>
                       <a>
-                        <img
+                        <Image
                           src='/assets/images/widget/gallery3.jpg'
                           alt='Gallery'
+                          height={100}
+                          width={100}
                         />
                         <i className='far fa-arrow-right' />
                       </a>
                     </Link>
                     <Link legacyBehavior href='/blog'>
                       <a>
-                        <img
+                        <Image
                           src='/assets/images/widget/gallery4.jpg'
                           alt='Gallery'
+                          height={100}
+                          width={100}
                         />
                         <i className='far fa-arrow-right' />
                       </a>
                     </Link>
                     <Link legacyBehavior href='/blog'>
                       <a>
-                        <img
+                        <Image
                           src='/assets/images/widget/gallery5.jpg'
                           alt='Gallery'
+                          height={100}
+                          width={100}
                         />
                         <i className='far fa-arrow-right' />
                       </a>
                     </Link>
                     <Link legacyBehavior href='/blog'>
                       <a>
-                        <img
+                        <Image
                           src='/assets/images/widget/gallery6.jpg'
                           alt='Gallery'
+                          height={100}
+                          width={100}
                         />
                         <i className='far fa-arrow-right' />
                       </a>
