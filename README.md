@@ -3,7 +3,7 @@
 > After every push to main, we need to update the docker image
 
 `docker build -t ghcr.io/contentql/pin-hcms:latest . --platform linux/amd64`
-`docker push ghcr.io/contentql/pin-hcms:latest`
+`docker push ghcr.io/contentql/pin-hcms:latest `
 
 # Testing Docker Production version
 
