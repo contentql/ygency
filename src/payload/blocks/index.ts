@@ -1,51 +1,56 @@
-// This is just to consolidate all the existing blocks and it's respective jsx
-// Always prefer to individually import, the required block or jsx
-import Banner from './About/Banner'
-import { Banner_Block } from './About/Banner/block'
-import OurClients from './About/OurClients'
-import { OurClients_Block } from './About/OurClients/block'
-import Statistics from './About/Statistics'
-import { Statistics_Block } from './About/Statistics/block'
-import TeamInfo from './About/TeamInfo'
-import { TeamInfo_Block } from './About/TeamInfo/block'
-import VideoArea from './About/VideoArea'
-import { VideoArea_Block } from './About/VideoArea/block'
-import AuthorDescription from './Author/AuthorDescription'
-import { AuthorDescription_Block } from './Author/AuthorDescription/block'
-import About from './Home/About'
-import { About_Block } from './Home/About/block'
-import Advertise from './Home/AdvertiseArea'
-import { Advertise_Block } from './Home/AdvertiseArea/block'
-import Headline from './Home/Headline'
-import { Headline_Block } from './Home/Headline/block'
-import Hero from './Home/Hero'
-import { Hero_Block } from './Home/Hero/block'
-import RecentWork from './Home/RecentWork'
-import { RecentWork_Block } from './Home/RecentWork/block'
-import Service from './Home/Service'
-import { Service_Block } from './Home/Service/block'
-import Skills from './Home/Skills'
-import { Skills_Block } from './Home/Skills/block'
-import Team from './Home/Team'
-import { Team_Block } from './Home/Team/block'
-import Testimonial from './Home/Testimonial'
-import { Testimonial_Block } from './Home/Testimonial/block'
-import Contact from './Pricing/Contact'
-import { Contact_Block } from './Pricing/Contact/block'
-import PageBanner from './Pricing/PageBanner'
-import { PageBanner_Block } from './Pricing/PageBanner/block'
-import PricingFeatures from './Pricing/PricingFeatures'
-import { PricingFeatures_Block } from './Pricing/PricingFeatures/block'
-import PricingSection from './Pricing/PricingSection'
-import { PricingSection_Block } from './Pricing/PricingSection/block'
-import ServiceBanner from './Services/ServiceBanner'
-import { ServiceBanner_Block } from './Services/ServiceBanner/block'
-import ServiceFeatures from './Services/ServiceFeatures'
-import { ServiceFeatures_Block } from './Services/ServiceFeatures/block'
-import WorkProcess from './Services/WorkProcess'
-import { WorkProcess_Block } from './Services/WorkProcess/block'
-import TagDescription from './Tag/TagDescription'
-import { TagDescription_Block } from './Tag/TagDescription/block'
+import {
+  Banner,
+  Banner_Block,
+  OurClients,
+  OurClients_Block,
+  Statistics,
+  Statistics_Block,
+  TeamInfo,
+  TeamInfo_Block,
+  VideoArea,
+  VideoArea_Block,
+} from './About'
+import { AuthorHero, Author_Hero_Block } from './Author'
+import { BlogHero, Blog_Hero_Block } from './Blog'
+import {
+  About,
+  About_Block,
+  Advertise,
+  Advertise_Block,
+  Headline,
+  Headline_Block,
+  Hero,
+  Hero_Block,
+  RecentWork,
+  RecentWork_Block,
+  Service,
+  Service_Block,
+  Skills,
+  Skills_Block,
+  Team,
+  Team_Block,
+  Testimonial,
+  Testimonial_Block,
+} from './Home'
+import {
+  Contact,
+  Contact_Block,
+  PageBanner,
+  PageBanner_Block,
+  PricingFeatures,
+  PricingFeatures_Block,
+  PricingSection,
+  PricingSection_Block,
+} from './Pricing'
+import {
+  ServiceBanner,
+  ServiceBanner_Block,
+  ServiceFeatures,
+  ServiceFeatures_Block,
+  WorkProcess,
+  WorkProcess_Block,
+} from './Services'
+import { TagsHero, Tags_Hero_Block } from './Tag'
 
 export const blocksJSX = {
   Advertise,
@@ -65,12 +70,13 @@ export const blocksJSX = {
   ServiceBanner,
   ServiceFeatures,
   WorkProcess,
-  TagDescription,
-  AuthorDescription,
+  TagsHero,
+  AuthorHero,
   PageBanner,
   PricingFeatures,
   PricingSection,
   Contact,
+  BlogHero,
 }
 
 export type SlugType = keyof typeof blocksJSX
@@ -93,10 +99,11 @@ export const blocks = [
   ServiceBanner_Block,
   ServiceFeatures_Block,
   WorkProcess_Block,
-  TagDescription_Block,
-  AuthorDescription_Block,
+  Tags_Hero_Block,
+  Author_Hero_Block,
   PageBanner_Block,
   PricingFeatures_Block,
   PricingSection_Block,
   Contact_Block,
+  Blog_Hero_Block,
 ]
