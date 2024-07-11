@@ -8,6 +8,7 @@ export const PageBanner_Block: Block = {
     singular: 'PageBanner Block',
     plural: 'PageBanner Blocks',
   },
+  imageAltText: 'text',
   fields: [
     {
       name: 'page_name',

@@ -1,8 +1,8 @@
-import { TagDescriptionType } from '@payload-types'
+import { TagsHeroType } from '@payload-types'
 
 import TagCard from '@/components/marketing/tag/TagCard'
 
-const TagDescription = (data: TagDescriptionType) => {
+const TagsHero = (data: TagsHeroType) => {
   return (
     <section
       id='services'
@@ -23,4 +23,4 @@ const TagDescription = (data: TagDescriptionType) => {
   )
 }
 
-export default TagDescription
+export default TagsHero

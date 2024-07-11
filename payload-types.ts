@@ -196,8 +196,8 @@ export interface Page {
         | ServiceBannerType
         | ServiceFeaturesType
         | WorkProcessType
-        | TagDescriptionType
-        | AuthorDescriptionType
+        | TagsHeroType
+        | AuthorHeroType
         | PageBannerType
         | PricingFeaturesType
         | PricingSectionType
@@ -532,26 +532,27 @@ export interface WorkProcessType {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "TagDescriptionType".
+ * via the `definition` "TagsHeroType".
  */
-export interface TagDescriptionType {
-  title?: string | null;
-  description?: string | null;
+export interface TagsHeroType {
+  title: string;
+  description: string;
+  image: string | Media;
   id?: string | null;
   blockName?: string | null;
-  blockType: 'TagDescription';
+  blockType: 'TagsHero';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "AuthorDescriptionType".
+ * via the `definition` "AuthorHeroType".
  */
-export interface AuthorDescriptionType {
-  sub_title?: string | null;
-  title?: string | null;
-  description?: string | null;
+export interface AuthorHeroType {
+  title: string;
+  description: string;
+  image: string | Media;
   id?: string | null;
   blockName?: string | null;
-  blockType: 'AuthorDescription';
+  blockType: 'AuthorHero';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
