@@ -35,10 +35,7 @@ const RecentWork = (data: RecentWorkType) => {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
 
                   <Image
-                    src={
-                      ((recentWork?.image as Media)?.url as string) ||
-                      'assets/images/projects/project-timeline-two1.jpg'
-                    }
+                    src={(recentWork?.image as Media)?.url as string}
                     alt={recentWork?.title as string}
                     width={298}
                     height={224}

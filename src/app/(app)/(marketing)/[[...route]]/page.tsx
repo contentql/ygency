@@ -13,6 +13,7 @@ const Page = async ({ params }: { params: { route: string[] } }) => {
       path: params?.route,
     })
 
+    return notFound()
     return <RenderBlocks pageInitialData={pageData as PageType} slug={params} />
   } catch (error) {
     console.error('Error: Page not found')

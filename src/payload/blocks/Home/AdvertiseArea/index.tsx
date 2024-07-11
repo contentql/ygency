@@ -17,7 +17,7 @@ const Advertise = (data: AdvertiseType) => {
                 <Image
                   src={
                     ((data?.banner_image as Media)?.url as string) ||
-                    'assets/images/banner/add-banner.png'
+                    '/assets/images/banner/add-banner.png'
                   }
                   alt='Banner'
                   height={325}

@@ -39,10 +39,7 @@ const About = (data: AboutType) => {
           <div className='col-lg-5'>
             <div className='image-border-shape wow fadeInRight delay-0-2s'>
               <Image
-                src={
-                  ((data?.about_image as Media)?.url as string) ||
-                  'assets/images/about/about-image-shape.png'
-                }
+                src={(data?.about_image as Media)?.url as string}
                 alt='About Image Shape'
                 width={429}
                 height={534}
