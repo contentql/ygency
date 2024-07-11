@@ -202,6 +202,7 @@ export interface Page {
         | PricingFeaturesType
         | PricingSectionType
         | ContactType
+        | BlogsHeroType
       )[]
     | null;
   slug?: string | null;
@@ -633,6 +634,18 @@ export interface ContactType {
   id?: string | null;
   blockName?: string | null;
   blockType: 'Contact';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "BlogsHeroType".
+ */
+export interface BlogsHeroType {
+  title: string;
+  description: string;
+  image: string | Media;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'BlogHero';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

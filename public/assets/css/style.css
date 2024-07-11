@@ -6165,6 +6165,11 @@ h6,
 .banner-inner h2 {
   margin-bottom: 20px;
 }
+
+.banner-inner p {
+  width: 600px;
+  margin: auto;
+}
 @media only screen and (min-width: 992px) {
   .banner-inner h2 {
     font-size: 55px;
@@ -6174,6 +6179,10 @@ h6,
   .banner-inner h2 {
     font-size: 40px;
     margin-bottom: 10px;
+  }
+  .banner-inner p {
+    width: 100%;
+    margin: auto;
   }
 }
 @media only screen and (max-width: 575px) {

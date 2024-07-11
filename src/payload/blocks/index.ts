@@ -11,6 +11,7 @@ import {
   VideoArea_Block,
 } from './About'
 import { AuthorHero, Author_Hero_Block } from './Author'
+import { BlogHero, Blog_Hero_Block } from './Blog'
 import {
   About,
   About_Block,
@@ -75,6 +76,7 @@ export const blocksJSX = {
   PricingFeatures,
   PricingSection,
   Contact,
+  BlogHero,
 }
 
 export type SlugType = keyof typeof blocksJSX
@@ -103,4 +105,5 @@ export const blocks = [
   PricingFeatures_Block,
   PricingSection_Block,
   Contact_Block,
+  Blog_Hero_Block,
 ]
